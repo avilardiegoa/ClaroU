@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coordinacion de Sistemas - Claro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/components/navbar.css">
+    <link rel="stylesheet" href="../css/components/cards.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
+    <link rel="stylesheet" href="../css/servicios/formacion.css">
+    <link rel="stylesheet" href="../css/servicios/sistemas.css">
+</head>
+<body id="sistemas-page">
+ <!-- Navbar -->
+ <nav class="navbar">
+    <div class="container nav-container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.png" alt="Logo Universidad Claro">
+        </a>
+
+        <!-- CAMBIO: Añadido el ícono del menú de hamburguesa para la vista responsive. -->
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="nav-links">
+            <div class="nav-item">
+                <a href="../categorias.html" class="nav-link">Categorías</a>
+            </div>
+
+            <div class="nav-item dropdown">
+                <a href="../servicios.html" class="nav-link">Servicios</a>
+                <div class="dropdown-content">
+                    <a href="../servicios.html">Inicio</a>
+                    <a href="formacion.html">Formación</a>
+                    <a href="contenidos.html">Contenidos</a>
+                    <a href="comunicacion.html">Comunicación</a>
+                    <a href="sistemas.html">Herramientas de apoyo</a>
+                    <a href="mediciones-reportes.html">Mediciones y Reportes</a>
+                </div>
+            </div>
+
+            <div class="nav-item search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="search" class="search-bar" placeholder="Buscar...">
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section para Formación -->
+<section class="hero-formacion" style="background: url('../assets/Banner/Index.png') center/cover no-repeat;">
+    <div class="hero-content">
+        <h1>Herramientas de apoyo</h1>
+    </div>
+</section>
+
+    <!-- Hero Section para Formación>
+    <section class="hero-formacion" style="background: #f8f9fa url('../assets/Banner/Sistemas.jpg') center/contain no-repeat;">
+    </section-->
+
+    <!-- Contenido Principal -->
+    <main class="content">
+        <div class="container">
+            <p class="intro-text">
+                Ofrecemos soluciones tecnológicas, soporte en plataformas y gestión de sistemas para optimizar tus operaciones. Explora nuestros servicios y solicita el soporte que necesitas.
+            </p>
+            
+            <div class="formacion-cards-row">
+                <!-- Tarjeta 1 -->
+                <div class="card-item open-modal" data-modal="modal1" style="background-image: url('../assets/popups/Portada/Sistemas1.png'); cursor:pointer;">
+                    <div class="card-overlay">
+                        <h4>Creación de certificación</h4>
+                        <span class="btn-ver-mas">Conoce más</span>
+                    </div>
+                    <h3>Creación de certificación</h3>
+                </div>
+                
+                <!-- Tarjeta 2 -->
+                <div class="card-item open-modal" data-modal="modal2" style="background-image: url('../assets/popups/Portada/Sistemas2.png'); cursor:pointer;">
+                    <div class="card-overlay">
+                        <h4>Solución en plataformas</h4>
+                        <span class="btn-ver-mas">Conoce más</span>
+                    </div>
+                    <h3>Solución en plataformas</h3>
+                </div>
+                
+                <!-- Tarjeta 3 -->
+                <div class="card-item open-modal" data-modal="modal3" style="background-image: url('../assets/popups/Portada/Sistemas3.png'); cursor:pointer;">
+                    <div class="card-overlay">
+                        <h4>Configuración de curso virtual en SSFF</h4>
+                        <span class="btn-ver-mas">Conoce más</span>
+                    </div>
+                    <h3>Configuración de curso virtual en SSFF</h3>
+                </div>
+
+                <!-- Tarjeta 4 -->
+                <div class="card-item open-modal" data-modal="modal4" style="background-image: url('../assets/popups/Portada/Sistemas4.png'); cursor:pointer;">
+                    <div class="card-overlay">
+                        <h4>Solicitud de acceso a plataformas de comunicación</h4>
+                        <span class="btn-ver-mas">Conoce más</span>
+                    </div>
+                    <h3>Solicitud de acceso a plataformas de comunicación</h3>
+                </div>
+            </div>
+
+            <div class="formacion-cards-row">
+                <!-- Tarjeta 5 -->
+                <div class="card-item open-modal" data-modal="modal5" style="background-image: url('../assets/popups/Portada/Sistemas5.png'); cursor:pointer;">
+                    <div class="card-overlay">
+                        <h4>Actualización de bases de datos</h4>
+                        <span class="btn-ver-mas">Conoce más</span>
+                    </div>
+                    <h3>Actualización de bases de datos</h3>
+                </div>
+                
+                <!-- Tarjeta 6 -->
+                <div class="card-item open-modal" data-modal="modal6" style="background-image: url('../assets/popups/Portada/Sistemas6.png'); cursor:pointer;">
+                    <div class="card-overlay">
+                        <h4>Matrícula de usuarios en plataforma de entrenamiento</h4>
+                        <span class="btn-ver-mas">Conoce más</span>
+                    </div>
+                    <h3>Matrícula de usuarios en plataforma de entrenamiento</h3>
+                </div>
+                
+                <!-- Tarjeta 7 -->
+                <div class="card-item open-modal" data-modal="modal7" style="background-image: url('../assets/popups/Portada/Sistemas7.png'); cursor:pointer;">
+                    <div class="card-overlay">
+                        <h4>Incidencia en sistema/plataforma</h4>
+                        <span class="btn-ver-mas">Conoce más</span>
+                    </div>
+                    <h3>Incidencia en sistema/plataforma</h3>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px; margin-bottom: 20px;">
+                <a href="../servicios.html" class="btn">Volver a Servicios</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modales de formación - Con X dentro de la caja -->
+    <!-- Modal 1 -->
+    <div id="modal1" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar">&times;</span>
+            <div class="modal-top-content">
+                <div class="texto">
+                    <h3>Creación de certificación</h3>
+                    <div class="accordion-container" style="padding: 0; margin-top: 20px;">
+                        <button class="accordion-btn">¿Cómo podemos ayudarte?</button>
+                        <div class="accordion-content">
+                            <p>Nos encargamos de cargar en SSFF hasta 30 preguntas que acompañan lo cursos y certificaciones.</p>
+                        </div>
+                        <button class="accordion-btn">Conoce la opción "Multibanco"</button>
+                        <div class="accordion-content">
+                            <p>Esta opción consiste en cargar las preguntas desde hasta 3 bancos independientes. Recuerda que estos bancos deben respetar los formatos establecidos. El tiempo estimado de producción es de 20 a 22 horas.</p>
+                        </div>
+                        <button class="accordion-btn">Explora la opción "Banco único"</button>
+                        <div class="accordion-content">
+                            <p>Esta opción consiste en cargar las preguntas desde un único banco. El tiempo estimado de producción es de 16 a 18 horas.</p>
+                        </div>
+                        <button class="accordion-btn">¿Cómo hacer tu solicitud?</button>
+                        <div class="accordion-content">
+                            <p>Tu solicitud debe ingresar mínimo con 48 horas de antelación (días hábiles).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="imagen-contenedor">
+                    <img src="../assets/images/Creacion_certificacion.png" alt="Creación de certificación">
+                </div>
+            </div>
+            <div class="modal-table-container">
+                <div class="modal-table-header">
+                    <div class="soluciones">Soluciones</div>
+                    <div class="tiempo-resolucion">
+                        Tiempo de resolución (HH/L-V)<br>
+                        8:00 am a 5:00 pm
+                    </div>
+                </div>
+                <table class="modal-table">
+                    <tr>
+                        <th>Tipo de solicitud</th>
+                        <th>Características</th>
+                        <th>Primera respuesta</th>
+                        <th>Resolución</th>
+                        <th>Total SLA</th>
+                    </tr>
+                    <tr>
+                        <td>Creación de certificación​</td>
+                        <td>Carga de 30 preguntas en la plataforma en un (1) curso y/o certificación habilitada en el LMS.</td>
+                        <td>2</td>
+                        <td>14</td>
+                        <td>16</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal 2 -->
+    <div id="modal2" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar">&times;</span>
+            <div class="modal-top-content">
+                <div class="texto">
+                    <h3>Solución en plataformas</h3>
+                    <p>La Solución en plataformas se basa en el diseño y desarrollo de herramientas tecnológicas, como landing pages o bases de datos, que aportan información estratégica para responder a tus necesidades. Estas soluciones se ajustan a los requerimientos específicos, ofreciendo resultados altamente personalizados. El tiempo de entrega varía según la complejidad y el alcance, y así garantizamos una implementación óptima.</p>
+                </div>
+                <div class="imagen-contenedor">
+                    <img src="../assets/images/Solucion_en_plataformas__Contenido.png" alt="Solución en plataformas">
+                </div>
+            </div>
+            <div class="modal-table-container">
+                <div class="modal-table-header">
+                    <div class="soluciones">Soluciones</div>
+                    <div class="tiempo-resolucion">
+                        Tiempo de resolución (HH/L-V)<br>
+                        8:00 am a 5:00 pm
+                    </div>
+                </div>
+                <table class="modal-table">
+                    <tr>
+                        <th>Tipo de solicitud</th>
+                        <th>Características</th>
+                        <th>Primera respuesta</th>
+                        <th>Resolución</th>
+                        <th>Total SLA</th>
+                    </tr>
+                    <tr>
+                        <td>Solución en plataformas​</td>
+                        <td>El diseño de soluciones tecnológicas se enfoca en proporcionar la información necesaria al negocio a través de los sistemas gestionados por U Claro, incluyendo el desarrollo de landing pages o bases de datos (DDBB) para facilitar el acceso y consulta eficiente.</td>
+                        <td>Segun el requerimiento</td>
+                        <td>Segun el requerimiento</td>
+                        <td>Segun el requerimiento</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal 3 -->
+    <div id="modal3" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar">&times;</span>
+            <div class="modal-top-content">
+                <div class="texto">
+                    <h3>Configuración de curso virtual en SSFF</h3>
+                    <p>Este servicio consiste en la creación de un espacio virtual dentro de nuestro LMS para alojar el contenido final de un curso. Incluye la integración de elementos como HTML, documentos, imágenes, multimedia y enlaces externos, asegurando una experiencia de aprendizaje completa y organizada. El tiempo estimado para su configuración va de las 12 horas estándar hasta un máximo de 14 horas, garantizando así una implementación ágil y eficiente.</p>
+                </div>
+                <div class="imagen-contenedor">
+                    <img src="../assets/images/Configuracion_de_curso_virtual_en_SSFF_Contenidos.png" alt="Configuración de curso virtual en SSFF">
+                </div>
+            </div>
+            <div class="modal-table-container">
+                <div class="modal-table-header">
+                    <div class="soluciones">Soluciones</div>
+                    <div class="tiempo-resolucion">
+                        Tiempo de resolución (HH/L-V)<br>
+                        8:00 am a 5:00 pm
+                    </div>
+                </div>
+                <table class="modal-table">
+                    <tr>
+                        <th>Tipo de solicitud</th>
+                        <th>Características</th>
+                        <th>Primera respuesta</th>
+                        <th>Resolución</th>
+                        <th>Total SLA</th>
+                    </tr>
+                    <tr>
+                        <td>Configuración de curso virtual en plataforma</td>
+                        <td>La solicitud consiste en configurar un curso virtual en SSFF, creando un espacio donde se cargue contenido (HTML, documentos, imágenes, multimedia, enlaces) y se establezca un foro para que los usuarios interactúen.</td>
+                        <td>2</td>
+                        <td>10</td>
+                        <td>12</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div><!-- Modal 4 -->
+    <div id="modal4" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar">&times;</span>
+            <div class="modal-top-content">
+                <div class="texto">
+                    <h3>Solicitud de acceso a plataformas de comunicación</h3>
+                    <p>Este servicio se encarga de gestionar los accesos a plataformas clave como Conectados y PID, administradas por Uclaro. Con él, garantizamos que el personal autorizado disponga de las credenciales necesarias para utilizar estos entornos de comunicación interna. El tiempo estimado de respuesta es de 10 horas estándar y puede prolongarse hasta 12 horas en casos excepcionales.</p>
+                </div>
+                <div class="imagen-contenedor">
+                    <img src="../assets/images/Solicitud_de_acceso_a_plataformas_de_comunicacion__Contenido.jpg" alt="Solicitud de acceso a plataformas de comunicación">
+                </div>
+            </div>
+            <div class="modal-table-container">
+                <div class="modal-table-header">
+                    <div class="soluciones">Soluciones</div>
+                    <div class="tiempo-resolucion">
+                        Tiempo de resolución (HH/L-V)<br>
+                        8:00 am a 5:00 pm
+                    </div>
+                </div>
+                <table class="modal-table">
+                    <tr>
+                        <th>Tipo de solicitud</th>
+                        <th>Características</th>
+                        <th>Primera respuesta</th>
+                        <th>Resolución</th>
+                        <th>Total SLA</th>
+                    </tr>
+                    <tr>
+                        <td>Solicitud de acceso a plataformas de comunicación​</td>
+                        <td>Solicitud de acceso a alguna de las plataformas de comunicación gestionadas por U Claro (Conectados y PID).​</td>
+                        <td>2</td>
+                        <td>8</td>
+                        <td>10</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 5 -->
+    <div id="modal5" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar">&times;</span>
+            <div class="modal-top-content">
+                <div class="texto">
+                    <h3>Actualización de bases de datos</h3>
+                    <p>Este servicio se encarga de actualizar hasta 100,000 registros en una base de datos existente, garantizando el mantenimiento de su estructura y formato original. Con ello, se asegura la coherencia y la correcta organización de la información. El tiempo estimado para completar el proceso varía entre 16 horas estándar y un máximo de 18 horas, según las necesidades del proyecto.</p>
+                </div>
+                <div class="imagen-contenedor">
+                    <img src="../assets/images/Actualizacion_de_bases_de_datos_.png" alt="Actualización de bases de datos">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- Modal 6 -->
+    <div id="modal6" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar">&times;</span>
+            <div class="modal-top-content">
+                <div class="texto">
+                    <h3>Matrícula de usuarios en plataforma de entrenamiento</h3>
+                    <p>La matrícula de usuarios en la plataforma de entrenamiento es un servicio que facilita el registro masivo de participantes en cursos o certificaciones ya habilitadas en el SSFF. Nuestro equipo se encarga de crear y cargar todos los perfiles necesarios, garantizando un acceso rápido y ordenado al contenido formativo. Este proceso suele completarse en 14 horas estándar, con un máximo de 16 horas, asegurando agilidad y eficiencia en la gestión.</p>
+                </div>
+                <div class="imagen-contenedor">
+                    <img src="../assets/images/Matricula_de_usuarios_en_plataforma_de_entrenamiento__Contenido.png" alt="Matrícula de usuarios en plataforma de entrenamiento">
+                </div>
+            </div>
+            <div class="modal-table-container">
+                <div class="modal-table-header">
+                    <div class="soluciones">Soluciones</div>
+                    <div class="tiempo-resolucion">
+                        Tiempo de resolución (HH/L-V)<br>
+                        8:00 am a 5:00 pm
+                    </div>
+                </div>
+                <table class="modal-table">
+                    <tr>
+                        <th>Tipo de solicitud</th>
+                        <th>Características</th>
+                        <th>Primera respuesta</th>
+                        <th>Resolución</th>
+                        <th>Total SLA</th>
+                    </tr>
+                    <tr>
+                        <td>Matrícula de usuarios en plataforma de entrenamiento</td>
+                        <td>Creación y matrícula masiva de usuarios en un curso y/o certificación habilitada en el LMS.​</td>
+                        <td>2</td>
+                        <td>10</td>
+                        <td>12</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 7 -->
+    <div id="modal7" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar">&times;</span>
+            <div class="modal-top-content">
+                <div class="texto">
+                    <h3>Incidencia en sistema/plataforma</h3>
+                    <p>Ante cualquier inconveniente técnico que afecte la experiencia del usuario—como problemas de visualización, acceso restringido, lentitud en la carga o fallas en el desempeño—nuestro equipo de soporte ofrece atención especializada en plataformas como SSFF, Comunidad Virtual, PID y Conectados. Garantizamos una atención rápida, con un tiempo de resolución entre 5 y 7 horas.</p>
+                </div>
+                <div class="imagen-contenedor">
+                    <img src="../assets/images/Incidencia_en_sistema_plataforma__Contenido.jpg" alt="Incidencia en sistema/plataforma">
+                </div>
+            </div>
+            <div class="modal-table-container">
+                <div class="modal-table-header">
+                    <div class="soluciones">Soluciones</div>
+                    <div class="tiempo-resolucion">
+                        Tiempo de resolución (HH/L-V)<br>
+                        8:00 am a 5:00 pm
+                    </div>
+                </div>
+                <table class="modal-table">
+                    <tr>
+                        <th>Tipo de solicitud</th>
+                        <th>Características</th>
+                        <th>Primera respuesta</th>
+                        <th>Resolución</th>
+                        <th>Total SLA</th>
+                    </tr>
+                    <tr>
+                        <td>Incidencia en sistema/Plataforma</td>
+                        <td>Los sistemas soportados incluyen SSFF, Comunidad Virtual, PID y Conectados. En caso de presentarse inconvenientes, se pueden generar reportes sobre diversas fallas, como problemas de visualización, acceso de usuarios, ralentización de la plataforma o la imposibilidad de cargar la plataforma. Estos reportes permiten identificar y solucionar rápidamente los problemas técnicos que puedan afectar el funcionamiento de las plataformas.​</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>5</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-logo">
+                <a href="../index.html" class="logo">
+                    <img src="../assets/images/logofooter.png" alt="Logo Universidad Claro">
+                </a>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="copyright">
+                &copy; 2025 Claro.com. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/scripts.js"></script>
+    <script>
+        // Funcionalidad para los modales
+        document.addEventListener('DOMContentLoaded', function() {
+            // Abrir modales
+            const openModalButtons = document.querySelectorAll('.open-modal');
+            openModalButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const modalId = this.getAttribute('data-modal');
+                    const modal = document.getElementById(modalId);
+                    if (modal) {
+                        modal.style.display = 'flex';
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            });
+            
+            // Cerrar modales
+            const closeButtons = document.querySelectorAll('.cerrar');
+            closeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const modal = this.closest('.modal');
+                    if (modal) {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            });
+            
+            // Cerrar al hacer clic fuera del modal
+            window.addEventListener('click', function(event) {
+                const modals = document.querySelectorAll('.modal');
+                modals.forEach(modal => {
+                    if (event.target === modal) {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            });
+        });
+
+        const accordions = document.querySelectorAll('.accordion-btn');
+        accordions.forEach(acc => {
+            acc.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+/* Estilos para el carrusel de héroes */
+.hero-carousel {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.hero-carousel .carousel-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-carousel .carousel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hero-carousel .carousel-slide {
+    min-width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.hero-carousel .carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-carousel .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 20px 25px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 2rem;
+    border-radius: 50%;
+}
+
+.hero-carousel .prev {
+    left: 30px;
+}
+
+.hero-carousel .next {
+    right: 30px;
+}
+
+/* Estilo para el bloque de texto de referencia */
+.texto-referencia {
+    background-image: url('../../assets/images/bloque.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 4rem 2rem;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.texto-referencia h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.texto-referencia p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: white;
+    max-width: 90%;
+}
+
+/* Estilos para la sección de servicios */
+.servicios-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.servicios-title .highlight {
+    color: #cf2028;
+}
+
+.card-carousel-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+/* Estilos para el carrusel de tarjetas */
+.card-carousel-container {
+    position: relative;
+    width: 100%;
+}
+
+.card-carousel {
+    overflow: hidden;
+}
+
+.card-track {
+    display: flex;
+}
+
+.card-slide {
+    flex: 0 0 calc(100% / 3); /* Mostrar 3 tarjetas a la vez */
+    padding: 0 10px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.card-item {
+    height: 350px; /* Altura fija para las tarjetas */
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.5s ease;
+}
+
+.card-item:hover::before {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 2;
+}
+
+.card-item:hover .card-overlay {
+    opacity: 1;
+}
+
+.card-overlay h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-overlay p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.btn-ver-mas {
+    background-color: #cf2028;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card-item:hover h3 {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-item h3 {
+    margin: 0;
+    padding: 1rem;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    text-align: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: relative;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.card-carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    line-height: 1;
+}
+
+.card-carousel-control.prev {
+    left: 15px;
+}
+
+.card-carousel-control.next {
+    right: 15px;
+}
+
+/* Estilos para la imagen de pie */
+.imagen-pie {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.imagen-pie img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- Estilos Responsivos --- */
+@media (max-width: 768px) {
+    /* Ajuste para el carrusel de la portada en móviles */
+    .hero-carousel {
+        /* Se reduce la altura para que la imagen no ocupe toda la pantalla */
+        height: 40vh;
+    }
+
+    .hero-carousel .carousel-slide img {
+        /* 
+         'object-fit: contain' asegura que la imagen completa sea visible,
+         aunque deje espacios en blanco si la proporción no coincide.
+         Se ajusta al tamaño del contenedor .hero-carousel.
+        */
+        object-fit: contain;
+    }
+
+    /* Ajuste para el bloque de texto en móviles */
+    .texto-referencia {
+        /* Se reduce el padding para que no ocupe tanto espacio vertical */
+        padding: 2rem 1rem;
+    }
+
+    /* Ajuste para la sección de servicios en móviles */
+    .servicios-section {
+        /* Se cambia la dirección para que el texto se ponga encima del carrusel */
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .servicios-title {
+        text-align: center;
+        padding-right: 0;
+        font-size: 1.8rem;
+    }
+
+    /* Ajuste para que el carrusel de contenido muestre una sola tarjeta */
+    .card-slide {
+        /* Se establece que cada tarjeta ocupe el 100% del ancho del carrusel */
+        flex: 0 0 100%;
+    }
+} 

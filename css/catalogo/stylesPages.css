@@ -1,0 +1,185 @@
+@font-face {
+  font-family: "amxregular";
+  src: url("../../assets/Fonts/amx-regular-webfont.woff2") format("woff2"),
+    url("../../assets/Fonts/amx-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "amxbold";
+  src: url("../../assets/Fonts/amx-bold-webfont.woff2") format("woff2"),
+    url("../../assets/Fonts/amx-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body,
+html {
+  font-family: "amxregular", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  /* Evitar que haya desplazamiento horizontal */
+  background-color: rgb(250, 245, 245);
+  height: 100%;
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-family: "amxbold", sans-serif;
+}
+
+.fondo {
+  background-image: url(../../assets/images/pages/Frame.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding-bottom: 100px;
+}
+
+.introduccion {
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  /* Centra horizontalmente */
+  align-items: center;
+  /* Centra verticalmente */
+}
+
+.icono-texto {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.icono-texto img {
+  width: 30px;
+  /* Tamaño del icono */
+  height: 30px;
+  margin-right: 8px;
+  /* Espacio entre el icono y el texto */
+}
+
+.definicion {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  background-color: #d42028;
+  color: white;
+  border-radius: 10px;
+}
+
+.boton {
+  background-color: #d42028;
+  color: white;
+  border-radius: 5px;
+  border-style: none;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+.enlace {
+  text-decoration: none;
+  color: white;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  /* Centra verticalmente los botones */
+  transform: translateY(-50%);
+  /* Ajuste para centrar completamente */
+  width: auto;
+  height: auto;
+  z-index: 2;
+}
+
+.carousel-control-prev {
+  left: -50px;
+  /* Ajusta según tus necesidades de diseño */
+  top: 55%;
+}
+
+.carousel-control-next {
+  right: -50px;
+  /* Ajusta según tus necesidades de diseño */
+  top: 55%;
+}
+
+.w-60 {
+  width: 60% !important;
+}
+.container-video {
+  /* background: url("../img/pages/video.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 500px;
+  position: relative; */
+}
+.container-video iframe {
+  width: 100%;
+  max-width: 1200px;
+  border: 0;
+  min-height: 800px;
+  /* padding-top: 55px; */
+  /* position: absolute; */
+  /* top: 45px;
+  left: 114px; */
+}
+.custom-table-container {
+            padding: 20px;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
+
+        .custom-table-header {
+            display: flex;
+            border-radius: 8px 8px 0 0;
+            overflow: hidden;
+        }
+
+        .custom-table-header div {
+            flex: 1;
+            padding: 15px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .custom-table-header .soluciones {
+            background-color: #c00000;
+            /* Rojo oscuro */
+        }
+
+        .custom-table-header .tiempo-resolucion {
+            background-color: #00afb0;
+            /* Verde azulado */
+        }
+
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+            border-top: none;
+        }
+
+        .custom-table th,
+        .custom-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .custom-table th {
+            background-color: #f2f2f2;
+            font-weight: 600;
+        }
+
+        .custom-table td {
+            background-color: #ffffff;
+        }

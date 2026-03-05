@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Universidad Claro </title>
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components/navbar.css">
+    <link rel="stylesheet" href="css/components/cards.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="Logo Universidad Claro">
+            </a>
+            
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="categorias.html" class="nav-link">Categorías</a>
+                </div>
+                
+                <div class="nav-item dropdown">
+                    <a href="servicios.html" class="nav-link">Servicios</a>
+                    <div class="dropdown-content">
+                        <a href="servicios.html">Inicio</a>
+                        <a href="servicios/formacion.html">Formación</a>
+                        <a href="servicios/contenidos.html">Contenidos</a>
+                        <a href="servicios/comunicacion.html">Comunicación</a>
+                        <a href="servicios/sistemas.html">Herramientas de apoyo</a>
+                        <a href="servicios/mediciones-reportes.html">Mediciones y Reportes</a>
+                    </div>
+                </div>
+                
+                <div class="nav-item search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="search" class="search-bar" placeholder="Buscar...">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background: url('assets/Banner/Index.png') center/cover no-repeat;">
+        <div class="hero-content">
+            <h1>Catálogo de Universidad Claro</h1>
+        </div>
+        <div class="hero-description-block">
+            <p>
+                Bienvenido al catálogo de soluciones de Universidad Claro. Conoce los diferentes productos y servicios diseñados a la medida, para impulsar tus indicadores y fortalecer el desarrollo de competencias clave en tu equipo. Nuestra oferta integra contenidos innovadores, experiencias de aprendizaje efectivas y metodologías adaptadas a los retos actuales de la organización.
+            </p>
+        </div>
+    </section>
+
+    <div class="hero-description-mobile">
+        <p>
+            Bienvenido al catálogo de soluciones de Universidad Claro. Conoce los diferentes productos y servicios diseñados a la medida, para impulsar tus indicadores y fortalecer el desarrollo de competencias clave en tu equipo. Nuestra oferta integra contenidos innovadores, experiencias de aprendizaje efectivas y metodologías adaptadas a los retos actuales de la organización.
+        </p>
+    </div>
+
+    <!-- Contenido Principal -->
+    <main class="content">
+        <div class="container">
+            <h2  style="font-size: 3rem;" class="section-title">Sobre Nosotros</h2>
+            <div class="intro-section">
+                <div class="intro-text">
+                    <p>
+                        ¡Explora cada sección y conoce los servicios que <span class="highlight">impulsan el aprendizaje y desarrollo!</span>
+                    </p>
+                </div>
+                
+                <!-- Tarjeta 1 -->
+                <a href="categorias.html" class="card-item" style="background-image: url('assets/popups/Portada/Categorias.png');">
+                    <div class="card-overlay">
+                        <h4>Categorías</h4>
+                        <p>Universidad Claro posee una serie de categorías que nos permiten reconocer cuál es tu necesidad y cómo podemos ayudarte. ¡Consúltalas ahora y permítenos ayudarte!</p>
+                        <span class="btn-ver-mas">Ver Categorías</span>
+                    </div>
+                    <h3>Categorías</h3>
+                </a>
+                
+                <!-- Tarjeta 2 -->
+                <a href="servicios.html" class="card-item" style="background-image: url('assets/popups/Portada/Servicios.png');">
+                    <div class="card-overlay">
+                        <h4>Nuestros Servicios</h4>
+                        <p>¡Conoce los servicios que universidad Claro ofrece a todas las áreas de Claro!</p>
+                        <span class="btn-ver-mas">Ver Servicios</span>
+                    </div>
+                    <h3>Nuestros Servicios</h3>
+                </a>
+            </div>
+
+            <div class="bottom-buttons-container">
+                <a href="https://conectados.com.co/inicio/-/knowledge_base_article/0000/103722025/maximized?p_p_auth=gpf3LpAO" target="_blank" class="custom-btn">
+                    <img src="assets/images/conectados.png" alt="Icono Conectados">
+                    <span>Conectados</span>
+                </a>
+                <a href="https://contenidosycomunicacion.freshdesk.com/support/login" target="_blank" class="custom-btn">
+                    <img src="assets/images/bombilla.png" alt="Icono Plataforma de solicitudes">
+                    <span>Plataforma de solicitudes</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-logo">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logofooter.png" alt="Logo Universidad Claro">
+                </a>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="copyright">
+                &copy; 2025 Claro.com. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>

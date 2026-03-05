@@ -1,0 +1,228 @@
+/* Estilos para la página de Comunicaciones - Nuevo Diseño */
+
+#sistemas-page .cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+#sistemas-page .card-item {
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.process-flow {
+    margin: 4rem 0;
+    padding: 2rem;
+    padding-bottom: 4rem; /* Espacio para la línea inferior */
+    background-color: #f4f7f9;
+    border-radius: 8px;
+    position: relative;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    gap: 50px 2rem; /* Más espacio vertical para las pestañas */
+}
+
+.process-step {
+    background: #fff;
+    border: 1px solid #e9e9e9;
+    border-radius: 12px;
+    padding: 2.5rem 1.5rem 1.5rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07);
+    text-align: center;
+    position: relative;
+}
+
+.process-step h4 {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    white-space: nowrap;
+}
+
+/* Colores de las pestañas */
+.process-step-blue h4 { background-color: #168ea9; }
+.process-step-red h4 { background-color: #cf2028; }
+.process-step-orange h4 { background-color: #e89327; }
+
+/* Línea decorativa inferior */
+.process-flow .bottom-line {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 5%;
+    width: 90%;
+    height: 3px;
+    background-color: #a0d1e5;
+}
+
+/* Layout para escritorio (3x2 centrado) */
+@media (min-width: 992px) {
+    .process-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .process-step {
+        flex: 0 1 30%;
+    }
+}
+
+/* Estilos para listas con íconos */
+.icon-list {
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+}
+
+.icon-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+#modal2 .icon-list img {
+    width: 16px; /* Iconos más pequeños para Diseño Creativo */
+    height: 16px;
+}
+
+.icon-list img {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    margin-top: 3px;
+}
+
+/* Estilos para el acordeón (botón desplegable) */
+.accordion-btn {
+    background-color: #f1f1f1;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.1rem;
+    transition: 0.4s;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+}
+
+.accordion-btn:hover {
+    background-color: #ddd;
+}
+
+/* Estilos para el acordeón de Endomarketing, Producción y Copy */
+#modal1 .accordion-btn,
+#modal3 .accordion-btn,
+#modal4 .accordion-btn {
+    background-color: #cf2028;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#modal1 .accordion-btn:hover,
+#modal3 .accordion-btn:hover,
+#modal4 .accordion-btn:hover {
+    background-color: #cf2028; /* Tono más oscuro para hover */
+}
+
+.accordion-container {
+    padding: 20px 40px 40px;
+}
+
+.accordion-content {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+/* Estilos para la tabla de tiempos de producción */
+.production-times {
+    margin-top: 2rem;
+}
+
+.production-times h4 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.production-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.production-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+} 
+
+/* Tabla para Diseño Creativo (modal2) - Estilo de sistemas.html */
+#modal2 .modal-table-container {
+    padding: 20px 40px 40px;
+}
+
+#modal2 .modal-table-header {
+    display: flex;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+}
+
+#modal2 .modal-table-header div {
+    flex: 1;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+#modal2 .soluciones {
+    background-color: #cf2028;
+}
+
+#modal2 .tiempo-resolucion {
+    display: none; /* Ocultar la celda azul */
+}
+
+#modal2 .modal-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+#modal2 .modal-table th,
+#modal2 .modal-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+#modal2 .modal-table tr td:first-child {
+    border-left: 3px solid #cf2028;
+}
+
+#modal2 .modal-table tr td:last-child {
+    border-left: 3px solid #168ea9;
+}
+
+#modal2 .modal-table th {
+    background-color: #f2f2f2;
+    font-weight: 600;
+} 

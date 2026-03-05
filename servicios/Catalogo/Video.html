@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo claro</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../css/catalogo/stylesPages.css?aaa">
+    
+    <style>
+        .custom-table-container {
+            padding: 20px;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
+
+        .custom-table-header {
+            display: flex;
+            border-radius: 8px 8px 0 0;
+            overflow: hidden;
+        }
+
+        .custom-table-header div {
+            flex: 1;
+            padding: 15px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .custom-table-header .soluciones {
+            background-color: #c00000;
+            /* Rojo oscuro */
+        }
+
+        .custom-table-header .tiempo-resolucion {
+            background-color: #00afb0;
+            /* Verde azulado */
+        }
+
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+            border-top: none;
+        }
+
+        .custom-table th,
+        .custom-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .custom-table th {
+            background-color: #f2f2f2;
+            font-weight: 600;
+        }
+
+        .custom-table td {
+            background-color: #ffffff;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <div class="container">
+        <!--Encabezado-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 p-0">
+                    <div class="encabezado">
+                        <img class="img-fluid w-100" src="../../assets/images/pages/Videodescubremas.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid bg-white">
+            <div class="row">
+                <di class="col-12">
+                    <p class="text-center m-4 p-4" style="font-size: 19px;">
+                       El <b>Video Claro</b> es un recurso audiovisual diseñado para explicar contenidos de forma clara, dinámica y visual. Su objetivo 
+                       es presentar conceptos teóricos, procesos simples o mensajes institucionales de manera ágil y atractiva, favoreciendo la 
+                       comprensión inmediata y la retención a corto plazo.
+                       <br><br>
+                       El video debe centrarse en un <b>solo objetivo de aprendizaje</b> y organizar su contenido en una secuencia narrativa simple: 
+                       introducción breve, explicación principal y cierre con recordatorio clave. Se recomienda una duración de <b>1 a 3 minutos,</b> 
+                       manteniendo frases cortas, apoyo visual coherente y ritmo estable. Es ideal para contextualizar temas, introducir 
+                       conceptos o reforzar mensajes clave. No está pensado para procedimientos complejos ni para mostrar flujos extensos 
+                       de herramientas.
+                   </p>
+               </di>
+           </div>
+       </div>
+       <center class="bg-white" style="padding-bottom: 50px;">
+        <div class="w-60 definicion" align="center">
+            <p class="p-3 m-0" style="font-size: 19px">
+                <b>Regla clave</b>
+                <br><br>
+                <b>Un mensaje central + una narrativa visual que lo refuerce.</b><br>
+                Para asegurar coherencia pedagógica y visual, <b>consulta las guías de producción de Video Claro.</b>
+            </p>
+        </div>
+    </center>
+    <div class="fondo d-flex flex-column align-items-center text-center ">
+
+        <div class="video w-75 mt-4">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="container-fluid">
+                        <div class="row">
+
+                                <!--div class="col-12 mt-3">
+                                    <div class="icono-texto">
+                                        <img src="../../assets/images/pages/icono.svg" alt="Icono">
+                                        <h2 class="mt-2"><strong></strong></h2>
+                                    </div-->
+                                    <div class="container-video">
+                                        <video controls width="100%" preload="metadata">
+                                            <source src="../../assets/examples/Video/Propuesta_video.mp4" type="video/mp4">
+                                                Tu navegador no soporta la reproducción de video.
+                                            </video>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla-->
+        <div class="custom-table-container">
+            <div class="custom-table-header">
+                <div class="tiempo-resolucion">
+                    Tiempo de resolución (HH/L-V)<br>
+                    8:00 am a 5:00 pm
+                </div>
+            </div>
+            <table class="custom-table">
+                <thead>
+                    <tr>
+                        <th class="text-center">Tipo de requerimiento</th>
+                        <th class="text-center">Descripción</th>
+                        <th class="text-center">Primera respuesta</th>
+                        <th class="text-center">Resolución</th>
+                        <th class="text-center">Total SLA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center">Producción Audiovisual</td>
+                        <td>- Contenido audiovisual de 1 minuto de duración.<br>
+                            - Video animado, puesta en escena o podcast (mp3).<br>
+                            - Video Requiere preproducción, producción y posproducción.<br>
+                            - Voz en off</td>
+                        <td class="text-center">2</td>
+                        <td class="text-center">22</td>
+                        <td class="text-center">24</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="mt-4 w-75 d-flex justify-content-end"> <!-- Alinear el botón a la derecha -->
+            <a class="enlace" style="margin-right: 10px;" href="../../servicios/contenidos.html">
+                <button class="boton">
+                    <strong> Volver al Inicio</strong>
+                </button>
+            </a>
+        </div>
+        <br><br>
+    </div>
+</div>
+
+<!-- Pie de página -->
+<footer class="bg-dark text-white text-center py-4">
+    <p>© 2024. Todos los derechos reservados.</p>
+</footer>
+
+<!-- Bootstrap JS y dependencias -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

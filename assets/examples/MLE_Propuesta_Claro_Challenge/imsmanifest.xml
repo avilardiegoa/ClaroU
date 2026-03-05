@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest identifier="MLE_Propuesta_Claro_Challenge" version="1.0" xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+    <lom xmlns="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd">
+      <general>
+        <title>
+          <langstring xml:lang="x-none">MLE_Propuesta_Claro_Challenge</langstring>
+        </title>
+      </general>
+      <lifecycle>
+        <version>
+          <langstring xml:lang="x-none">1</langstring>
+        </version>
+        <status>
+          <source>
+            <langstring xml:lang="x-none">LOMv1.0</langstring>
+          </source>
+          <value>
+            <langstring xml:lang="x-none">Final</langstring>
+          </value>
+        </status>
+      </lifecycle>
+      <metametadata>
+        <metadatascheme>ADL SCORM 1.2</metadatascheme>
+      </metametadata>
+      <educational>
+        <typicallearningtime>
+          <datetime>PT0H0M0S</datetime>
+        </typicallearningtime>
+      </educational>
+      <rights>
+        <cost>
+          <source>
+            <langstring xml:lang="x-none">LOMv1.0</langstring>
+          </source>
+          <value>
+            <langstring xml:lang="x-none">yes</langstring>
+          </value>
+        </cost>
+        <copyrightandotherrestrictions>
+          <source>
+            <langstring xml:lang="x-none">LOMv1.0</langstring>
+          </source>
+          <value>
+            <langstring xml:lang="x-none">yes</langstring>
+          </value>
+        </copyrightandotherrestrictions>
+      </rights>
+    </lom>
+  </metadata>
+  <organizations default="MLE_Propuesta_Claro_Challenge_ORG">
+    <organization identifier="MLE_Propuesta_Claro_Challenge_ORG">
+      <title>MLE_Propuesta_Claro_Challenge</title>
+      <item identifier="MLE_Propuesta_Claro_Challenge_SCO" isvisible="true" identifierref="_MLE_Propuesta_Claro_Challenge_RES">
+        <title>MLE_Propuesta_Claro_Challenge</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="_MLE_Propuesta_Claro_Challenge_RES" type="webcontent" href="index_lms.html" adlcp:scormtype="sco">
+      <file href="story_content/thumbnail.jpg" />
+      <file href="mobile/66cyTZwrD70.png" />
+      <file href="mobile/6gBedmqPRzG.png" />
+      <file href="mobile/5pLk1eylwBR.png" />
+      <file href="mobile/68PHyuUfoXi_XY.png" />
+      <file href="mobile/68PHyuUfoXi_Y.png" />
+      <file href="mobile/6HlQj46uxO6_X.png" />
+      <file href="mobile/6HlQj46uxO6.png" />
+      <file href="mobile/5a4vIATCzQ6_Y.png" />
+      <file href="mobile/6Y6Hw2NdTuE_P_0_123_1333_1876.png" />
+      <file href="mobile/66s5ynih3f4.png" />
+      <file href="mobile/5ihthN5kiqL.png" />
+      <file href="mobile/6bPu7ZHmJZI.png" />
+      <file href="mobile/6JiRAvc1VcZ.png" />
+      <file href="mobile/5tRnKl1fuDm.gif" />
+      <file href="mobile/6i2g4PxjBgf_X_P_0_4_151_519.png" />
+      <file href="mobile/6i2g4PxjBgf_X_P_0_4_151_516.png" />
+      <file href="mobile/5vplWqG5B8F_B-20_C40.png" />
+      <file href="mobile/5kjM3z5IulA.png" />
+      <file href="mobile/5vplWqG5B8F.png" />
+      <file href="mobile/5rQOKtbHDMm_B-20_C40.png" />
+      <file href="mobile/6Eqrcod6MIM.png" />
+      <file href="mobile/6Eqrcod6MIM_B-20_C40.png" />
+      <file href="mobile/6MGzYMKlG7C_B-20_C40.png" />
+      <file href="mobile/6STvKn0HFIC.png" />
+      <file href="mobile/6MGzYMKlG7C.png" />
+      <file href="mobile/5iy48UTMico_B-20_C40.png" />
+      <file href="mobile/6Pf9i6os0Q6.png" />
+      <file href="mobile/5bf7HSPju2a.gif" />
+      <file href="mobile/6i2g4PxjBgf_P_0_78_151_445.png" />
+      <file href="mobile/6nB5qADQB7k_P_535_297_110_98.png" />
+      <file href="story_content/zoomIcon.png" />
+      <file href="mobile/63ZNeb27XUd_P_25_14_1396_676.png" />
+      <file href="mobile/5eHuYGlzPwy.png" />
+      <file href="mobile/6Y6Hw2NdTuE_P_0_123_1333_1683.png" />
+      <file href="mobile/6prLEEugm3k_P_157_0_502_704.png" />
+      <file href="mobile/5rQOKtbHDMm_C-40.png" />
+      <file href="mobile/5WZf7kWuU31.png" />
+      <file href="mobile/6c6axXwymIG_P_0_0_1545_1076.png" />
+      <file href="mobile/6dq5QXlcrl7_P_0_0_988_225.png" />
+      <file href="mobile/6LHm8FDrlAu_P_0_0_1077_444.png" />
+      <file href="mobile/6Xri0rer9Bz.png" />
+      <file href="mobile/6MGzYMKlG7C_C-40.png" />
+      <file href="mobile/63Rc11h5lkf_P_0_0_853_836.png" />
+      <file href="mobile/68PHyuUfoXi.png" />
+      <file href="mobile/6nB5qADQB7k_P_535_297_244_232.png" />
+      <file href="mobile/6nB5qADQB7k_P_-2_-2_176_169.png" />
+      <file href="mobile/6nB5qADQB7k_P_40_42_133_124.png" />
+      <file href="mobile/6TwCoxoFkwA_P_0_0_853_839.png" />
+      <file href="mobile/6KfqSmzZq93_P_0_13_197_55.png" />
+      <file href="mobile/6NWX3XG5yvC_P_0_0_258_380.png" />
+      <file href="mobile/5vplWqG5B8F_C-40.png" />
+      <file href="mobile/5iy48UTMico_C-40.png" />
+      <file href="mobile/5r9uChnVlb3.png" />
+      <file href="mobile/6c0grjtCxnY_P_0_31_1072_646.png" />
+      <file href="meta.xml" />
+      <file href="story_content/triggers.js" />
+      <file href="story_content/user.js" />
+      <file href="mobile/Shape68qHE1G0CGy.png" />
+      <file href="mobile/Shape6UfdGDvuLhN.png" />
+      <file href="mobile/Shape6DhcwEHA9e8.png" />
+      <file href="mobile/Shape5t9CVaTMS7S.png" />
+      <file href="mobile/Shape6WLQpygxHfu.png" />
+      <file href="mobile/Shape5tjNjLYAISx.png" />
+      <file href="mobile/Shape5uA3DNTvX1z.png" />
+      <file href="html5/data/css/output.min.css" />
+      <file href="html5/data/js/5cmKQtfzdS2.js" />
+      <file href="html5/data/js/5cqU5rCIy62.js" />
+      <file href="html5/data/js/5eG27K9l4Fj.js" />
+      <file href="html5/data/js/5n9VZbDLN36.js" />
+      <file href="html5/data/js/5qycS247EIV.js" />
+      <file href="html5/data/js/5VWeeEBAzJz.js" />
+      <file href="html5/data/js/5XLg6gG3lem.js" />
+      <file href="html5/data/js/5znoSvwKwPW.js" />
+      <file href="html5/data/js/63R5d7gqBvF.js" />
+      <file href="html5/data/js/6b4l0MaWNHz.js" />
+      <file href="html5/data/js/6DtLh3rZDyb.js" />
+      <file href="html5/data/js/6eDLpWQ7ytv.js" />
+      <file href="html5/data/js/6fKhxRTJYme.js" />
+      <file href="html5/data/js/6grCw4D3JOy.js" />
+      <file href="html5/data/js/6jPLmAMUgNJ.js" />
+      <file href="html5/data/js/6ltTFy1AFmx.js" />
+      <file href="html5/data/js/6UM9kYOJVlP.js" />
+      <file href="html5/data/js/6ZMTtPfXgCt.js" />
+      <file href="html5/data/js/data.js" />
+      <file href="html5/data/js/frame.js" />
+      <file href="html5/data/js/paths.js" />
+      <file href="html5/lib/scripts/bootstrapper.min.js" />
+      <file href="html5/lib/scripts/frame.desktop.min.js" />
+      <file href="html5/lib/scripts/frame.mobile.min.js" />
+      <file href="html5/lib/scripts/slides.min.js" />
+      <file href="html5/lib/stylesheets/desktop.min.css" />
+      <file href="html5/lib/stylesheets/mobile.min.css" />
+      <file href="html5/lib/stylesheets/mobile-fonts/open-sans-bold.woff" />
+      <file href="html5/lib/stylesheets/mobile-fonts/open-sans-light.woff" />
+      <file href="html5/lib/stylesheets/mobile-fonts/open-sans-regular.woff" />
+      <file href="analytics-frame.html" />
+      <file href="story.html" />
+      <file href="index_lms.html" />
+      <file href="lms/AICCComm.html" />
+      <file href="lms/blank.html" />
+      <file href="lms/browsersniff.js" />
+      <file href="lms/goodbye.html" />
+      <file href="lms/scormdriver.js" />
+    </resource>
+  </resources>
+</manifest>

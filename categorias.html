@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorias</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components/navbar.css">
+    <link rel="stylesheet" href="css/components/cards.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/servicios/formacion.css">
+    <!--  Diseño boton brief  -->
+    <style>
+        .btn-gestionar {
+            background-color: #CF2028;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(207, 32, 40, 0.4);
+            margin: 40px auto; /* Cambiado de margin-top a margin para espaciado vertical y auto para centrar */
+            display: block; /* Cambiado de inline-block a block para poder usar margin auto */
+            text-decoration: none;
+            width: fit-content; /* Para que el botón solo ocupe el espacio necesario */
+        }
+
+        .btn-gestionar:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(207, 32, 40, 0.6);
+            background-color: #B01C23;
+        }
+
+        .btn-gestionar:active {
+            transform: translateY(0);
+            box-shadow: 0 3px 10px rgba(207, 32, 40, 0.4);
+        }
+    </style>
+</head>
+<body>
+   <!-- Navbar -->
+   <nav class="navbar">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo.png" alt="Logo Universidad Claro">
+        </a>
+
+        <!-- CAMBIO: Añadido el ícono del menú de hamburguesa para la vista responsive. -->
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="nav-links">
+            <div class="nav-item">
+                <a href="categorias.html" class="nav-link">Categorías</a>
+            </div>
+
+            <div class="nav-item dropdown">
+                <a href="servicios.html" class="nav-link">Servicios</a>
+                <div class="dropdown-content">
+                    <a href="servicios.html">Inicio</a>
+                    <a href="servicios/formacion.html">Formación</a>
+                    <a href="servicios/contenidos.html">Contenidos</a>
+                    <a href="servicios/comunicacion.html">Comunicación</a>
+                    <a href="servicios/sistemas.html">Herramientas de apoyo</a>
+                    <a href="servicios/mediciones-reportes.html">Mediciones y Reportes</a>
+                </div>
+            </div>
+
+            <div class="nav-item search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="search" class="search-bar" placeholder="Buscar...">
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section para Formación -->
+<section class="hero-formacion" style="background: url('assets/Banner/categorias.png') center/cover no-repeat;">
+    <div class="hero-content">
+        <h1>Categorías</h1>
+    </div>
+</section>
+
+<style>
+    .info-cards-container {
+        display: flex;
+        flex-wrap: nowrap; /* Mantiene todo en una sola fila */
+        gap: 20px;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+    .info-card {
+        background-color: #ffffff; 
+        border-radius: 12px;
+        padding: 25px 20px;
+        flex: 1 1 0; /* Permite que se encojan y dividan el espacio en partes iguales */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border: 1px solid #eaeaea;
+    }
+    .info-card .intro-text {
+        flex-grow: 1; 
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+
+    /* Contenedor ajustado para 2 filas de 2 tarjetas */
+    .cards-container {
+        display: flex;
+        flex-wrap: wrap; /* Permite que bajen a la siguiente fila */
+        gap: 30px; /* Espaciado entre las tarjetas */
+        justify-content: center;
+        max-width: 900px; /* Limita el ancho para que no se vean gigantes ni pegadas a los bordes */
+        margin: 0 auto; /* Centra el contenedor */
+    }
+    
+    .card-item {
+        flex: 1 1 calc(50% - 30px); /* Obliga a que haya exactamente 2 por fila */
+        max-width: calc(50% - 30px); /* Evita que se estiren de más */
+        /* El resto de tus estilos de .card-item se mantienen igual */
+    }
+</style>
+
+<main class="content">
+    <div class="container">
+
+        <div class="cards-container">
+            <div class="card-item open-modal" data-modal="modal1" style="background-image: url('assets/popups/Portada/Categorias1.png'); cursor:pointer;">
+                <div class="card-overlay">
+                    <span class="btn-ver-mas">Conoce más</span>
+                </div>
+            </div>
+
+            <div class="card-item open-modal" data-modal="modal2" style="background-image: url('assets/popups/Portada/Categorias2.png'); cursor:pointer;">
+                <div class="card-overlay">
+                    <span class="btn-ver-mas">Conoce más</span>
+                </div>
+            </div>
+
+            <div class="card-item open-modal" data-modal="modal3" style="background-image: url('assets/popups/Portada/Categorias3.png'); cursor:pointer;">
+                <div class="card-overlay">
+                    <span class="btn-ver-mas">Conoce más</span>
+                </div>
+            </div>
+
+            <div class="card-item open-modal" data-modal="modal4" style="background-image: url('assets/popups/Portada/Categorias4.png'); cursor:pointer;">
+                <div class="card-overlay">
+                    <span class="btn-ver-mas">Conoce más</span>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+        <p class="intro-text">Explora los recursos y herramientas clave para gestionar tus solicitudes y procesos de formación.</p>
+        
+        <div class="info-cards-container">
+
+            <div class="info-card">
+                <p class="intro-text">
+                    Conoce nuestra Learning Strategy, ¡haz clic y diseña tu plan de formación!
+                </p>
+                <button class="btn-gestionar" onclick="window.open('https://comunidadvirtual.claro.com.co/www/lms/Biblioteca/Documentos/others/MAU/Learning_Strategy/LE.html', '_blank')">
+                    Learning Strategy
+                </button>
+            </div>
+            
+            <div class="info-card">
+                <p class="intro-text">
+                    ¡Aprende sobre las diferentes categorías que Universidad Claro tiene para clasificar sus productos!
+                </p>
+                <button class="btn-gestionar" onclick="window.open('https://universidadclarocomercial.claro.com.co/public/Brief/brief_unico.html', '_blank')">
+                    Gestionar Brief
+                </button>
+            </div>
+
+            <div class="info-card">
+                <p class="intro-text">
+                    Si no tienes claro cómo deben crearse las solicitudes, haz clic en el siguiente botón para revisar el manual del brief. 
+                </p>
+                <button class="btn-gestionar" onclick="window.open('assets/123917_MANUAL_BRIEF_UCLARO_23_12_25_VF (1).pdf', '_blank')">
+                    Manual de Usuario
+                </button>
+            </div>
+
+            <div class="info-card">
+                <p class="intro-text">
+                    Además, puedes conocer el procedimiento para crear los tickets en FreshDesk revisando la siguiente guía. 
+                </p>
+                <button class="btn-gestionar" onclick="window.open('assets/Guía para la creación de tickets.pdf', '_blank')">
+                    Guía de creación de tickets
+                </button>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<!-- Modales de formación - Con X dentro de la caja -->
+<!-- Modal 1 -->
+<div id="modal1" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar">&times;</span>
+        <div class="texto">
+            <h3>Aprendizaje para el reentrenamiento</h3>
+            <p>
+                Potencia el talento de tu equipo con nuestros programas de formación de refuerzo, diseñados para consolidar conocimientos clave; cerrar brechas de aprendizaje y llevar el desempeño al siguiente nivel.
+            </p>
+
+            <p>
+                Detectamos necesidades específicas y aplicamos estrategias efectivas que garantizan la retención del conocimiento y su aplicación directa en el entorno laboral.
+            </p>
+        </div>
+        <div class="imagen-contenedor">
+            <img src="assets/popups/ContPopup/Categorias1.png" alt="Formación Presencial">
+        </div>
+    </div>
+</div>
+
+<!-- Modal 2 -->
+<div id="modal2" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar">&times;</span>
+        <div class="texto">
+            <h3>Aprendizaje ágil para la evolución de procesos y productos</h3>
+            <p>
+                En un entorno donde todo cambia, formar al equipo no es una opción, es una ventaja competitiva. Por eso, creamos experiencias de aprendizaje que impulsan el éxito de cada lanzamiento o actualización clave.
+            </p>
+
+            <p>
+                Nuestros programas garantizan que cada colaborador entienda a fondo los nuevos productos, servicios o procesos. Desarrollamos habilidades para aplicarlos de forma eficiente, coherente y siempre centrada en la experiencia del cliente.
+            </p>
+        </div>
+        <div class="imagen-contenedor">
+            <img src="assets/popups/ContPopup/Categorias2.png" alt="Formación Online">
+        </div>
+    </div>
+</div>
+
+<!-- Modal 3 -->
+<div id="modal3" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar">&times;</span>
+        <div class="texto">
+            <h3>Herramientas ágiles para el aprendizaje y conocimiento</h3>
+            <p>
+            En un mundo donde el cambio no se detiene, formar a nuestros equipos es clave para avanzar. Creamos experiencias de aprendizaje que facilitan la transición hacia nuevas formas de hacer, ofrecer y operar, para lo cual fortalecemos la adaptabilidad con propósito.                </p>
+
+            <p>
+                Nuestros programas preparan a las personas para enfrentar cada transformación con claridad, motivación y compromiso. Así, garantizamos la alineación con los objetivos estratégicos y reducimos la resistencia al cambio.
+            </p>
+        </div>
+        <div class="imagen-contenedor">
+            <img src="assets/popups/ContPopup/Categorias3.png" alt="Formación Híbrida">
+        </div>
+    </div>
+</div><!-- Modal 4 -->
+<div id="modal4" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar">&times;</span>
+        <div class="texto">
+            <h3>Estrategias de aprendizaje para la alta productividad</h3>
+            <p>
+            Formar con propósito transforma los resultados. Nuestra línea de formación, en excelencia operativa, impulsa la optimización de procesos, el mejoramiento continuo y el cumplimiento eficiente de metas.                </p>
+            <p>
+                A través de programas estructurados de onboarding, facilitamos la incorporación efectiva de nuevos colaboradores, asegurando una adaptación ágil y alineada con los objetivos del negocio. Además, desarrollamos habilidades técnicas y blandas que fortalecen el talento, elevan los indicadores de desempeño y consolidan una cultura enfocada en la mejora constante.
+            </p>
+        </div>
+        <div class="imagen-contenedor">
+            <img src="assets/popups/ContPopup/Categorias4.png" alt="Formación Online">
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container footer-container">
+        <div class="footer-logo">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logofooter.png" alt="Logo Universidad Claro">
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="copyright">
+            &copy; 2025 Claro.com. Todos los derechos reservados.
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<!-- CAMBIO: Corregido el path al script principal para que el menú responsive funcione. -->
+<script src="js/scripts.js"></script>
+<script>
+        // Funcionalidad para los modales
+    document.addEventListener('DOMContentLoaded', function() {
+            // Abrir modales
+        const openModalButtons = document.querySelectorAll('.open-modal');
+        openModalButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const modalId = this.getAttribute('data-modal');
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+            // Cerrar modales
+        const closeButtons = document.querySelectorAll('.cerrar');
+        closeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const modal = this.closest('.modal');
+                if (modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+
+            // Cerrar al hacer clic fuera del modal
+        window.addEventListener('click', function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

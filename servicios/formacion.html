@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formación</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/components/navbar.css">
+    <link rel="stylesheet" href="../css/components/cards.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
+    <link rel="stylesheet" href="../css/servicios/formacion.css">
+
+    <style>
+        .btn-modelo-rojo {
+            background-color: #CF2028;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 15px 40px;
+            font-size: 22px;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(207, 32, 40, 0.3);
+        }
+
+        .fondo-ondas-seccion {
+            /* REEMPLAZA ESTA RUTA POR LA IMAGEN DE TU FONDO GRIS CON ONDAS */
+            background-color: #EFEFEF; 
+            background-image: url('../assets/act/fondo.png'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 20px 20px;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .caja-blanca {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 25px 40px;
+            margin-bottom: 35px;
+        }
+
+        .texto-centrado {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .imagen-3e-placeholder {
+            display: block;
+            max-width: 100%;
+            width: 800px;
+            margin: 0 auto 35px auto;
+        }
+
+        .caja-detalles {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .detalle-item {
+            margin-bottom: 20px;
+        }
+
+        .detalle-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .palabra-teal {
+            color: #1693AE; /* Color azul/verde del pantallazo */
+            font-weight: bold;
+        }
+
+        .caja-detalles ul {
+            list-style: none;
+            padding-left: 20px;
+            margin-top: 5px;
+        }
+
+        .caja-detalles li {
+            position: relative;
+            margin-bottom: 5px;
+        }
+
+        .caja-detalles li::before {
+            content: '*';
+            color: #3fa1b3;
+            position: absolute;
+            left: -15px;
+            top: 2px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+   <nav class="navbar">
+    <div class="container nav-container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.png" alt="Logo Universidad Claro">
+        </a>
+
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="nav-links">
+            <div class="nav-item">
+                <a href="../categorias.html" class="nav-link">Categorías</a>
+            </div>
+
+            <div class="nav-item dropdown">
+                <a href="../servicios.html" class="nav-link">Servicios</a>
+                <div class="dropdown-content">
+                    <a href="../servicios.html">Inicio</a>
+                    <a href="formacion.html">Formación</a>
+                    <a href="contenidos.html">Contenidos</a>
+                    <a href="comunicacion.html">Comunicación</a>
+                    <a href="sistemas.html">Herramientas de apoyo</a>
+                    <a href="mediciones-reportes.html">Mediciones y Reportes</a>
+                </div>
+            </div>
+
+            <div class="nav-item search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="search" class="search-bar" placeholder="Buscar...">
+            </div>
+        </div>
+    </div>
+</nav>
+
+<section class="hero-formacion" style="background: url('../assets/Banner/categorias.png') center/cover no-repeat;">
+    <div class="hero-content">
+        <h1>Formación</h1>
+    </div>
+</section>
+
+<main class="content">
+    
+    <div class="container">
+        <p class="intro-text" style="font-size: 20px !important; text-align: center; margin-bottom: 40px;">
+            Para Universidad Claro, el desarrollo del talento humano es una prioridad. Por eso, convertimos la formación en un motor estratégico, con programas diseñados para fortalecer competencias técnicas, digitales, humanas y comerciales, alineados con los objetivos del negocio. Combinamos innovación, tecnología y experiencias significativas para asegurar que el conocimiento adquirido posea un impacto real en las labores diarias.
+        </p>
+
+        <div style="margin-bottom: 30px; text-align: center;">
+            <span class="btn-modelo-rojo">
+                Modelo de formación de la Universidad: Modelo 3E
+            </span>
+        </div>
+    </div>
+
+    <section class="fondo-ondas-seccion">
+        <div class="container" style="max-width: 900px; padding: 0;">
+            <br>
+            <div class="caja-blanca texto-centrado">
+                El modelo 3E enfoca su acción en el desarrollo de experiencias de aprendizaje en diferentes ámbitos, las cuales deben permitir:
+            </div>
+
+            <img src="../assets/act/tabla.png" alt="Gráfico 3 E" class="imagen-3e-placeholder">
+
+            <div class="caja-blanca caja-detalles">
+                <p style="margin-bottom: 20px;">
+                    Como tal, este modelo busca <b>potenciar el aprendizaje integral</b> a través de los siguientes elementos:
+                </p>
+
+                <div class="detalle-item">
+                    <p><span class="palabra-teal">Educación:</span> hace referencia a la conceptualización y contenidos. Los objetivos de este componente son:</p>
+                    <ul>
+                        <li>Proporcionar conocimientos teóricos y conceptuales que sirvan como base para la comprensión.</li>
+                        <li>Favorecer la reflexión crítica y el desarrollo cognitivo.</li>
+                        <li>Garantizar que el aprendizaje esté alineado con objetivos.</li>
+                    </ul>
+                </div>
+
+                <div class="detalle-item">
+                    <p><span class="palabra-teal">Exposición:</span> consiste en el trabajo colaborativo que implica el aprendizaje de otros y de otras perspectivas (<i>mentoring, shadowing</i>, OJT). Los objetivos de este componente son:</p>
+                    <ul>
+                        <li>Acercar al usuario a contextos reales o simulados donde pueda observar la aplicación práctica del conocimiento.</li>
+                        <li>Promover la curiosidad y la conexión entre teoría y práctica.</li>
+                    </ul>
+                </div>
+
+                <div class="detalle-item">
+                    <p><span class="palabra-teal">Experiencia:</span> hace referencia a la práctica y aplicación de lo aprendido por medio de espacios simulados y aplicación directa. Los objetivos de este componente son:</p>
+                    <ul>
+                        <li>Fomentar el aprendizaje vivencial y la construcción de saberes a partir de la acción.</li>
+                        <li>Desarrollar competencias y habilidades transferibles al mundo real.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="container">
+            <div class="modalidades-box">
+                <h2>¡Conoce nuestras diferentes modalidades de formación!</h2>
+            </div>
+
+            <div class="cards-container">
+                <div class="card-item open-modal" data-modal="modal1" style="background-image: url('../assets/popups/Portada/Presencial.png'); cursor:pointer;">
+                    <div class="card-overlay">
+                        <h4>Formación Presencial</h4>
+                        <p>La formación presencial ofrece un entorno inmersivo donde el intercambio directo con expertos y compañeros potencia el aprendizaje colectivo.</p>
+                        <span class="btn-ver-mas">Conoce más</span>
+                    </div>
+                    <h3>Formación Presencial</h3>
+                </div>
+
+                <div class="card-item open-modal" data-modal="modal2" style="background-image: url('../assets/popups/Portada/Virtual.png'); cursor:pointer;">
+                    <div class="card-overlay">
+                        <h4>Formación Virtual</h4>
+                        <p>A través de plataformas sólidas y contenidos interactivos, ofrecemos experiencias adaptadas a cada estilo de aprendizaje.</p>
+                        <span class="btn-ver-mas">Conoce más</span>
+                    </div>
+                    <h3>Formación Virtual</h3>
+                </div>
+
+                <div class="card-item open-modal" data-modal="modal3" style="background-image: url('../assets/popups/Portada/BLearning.png'); cursor:pointer;">
+                    <div class="card-overlay">
+                        <h4>Formación Telepresencial</h4>
+                        <p>Integramos la interacción en tiempo real con la flexibilidad de los entornos digitales para ofrecer experiencias de aprendizaje dinámicas.</p>
+                        <span class="btn-ver-mas">Conoce más</span>
+                    </div>
+                    <h3>Formación Telepresencial</h3>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="modalidades-box">
+                <h2>Tipos de espacio formativo</h2>
+            </div>
+
+            <div class="cards-container">
+
+                <div class="card-item open-modal" data-modal="modal4" style="background-image: url('../assets/popups/Portada/Formatoenlinea1.png'); cursor:pointer;">
+                    <div class="card-overlay">
+                        <h4>Fórmate en línea</h4>
+                        <p>"Recursos formativos virtuales de corta duración y autoestudio, ideales para adquirir información clave de forma ágil y flexible."</p>
+                        <span class="btn-ver-mas">Conoce más</span>
+                    </div>
+                    <h3>Fórmate en línea</h3>
+                </div>
+
+                <div class="card-item open-modal" data-modal="modal5" style="background-image: url('../assets/popups/Portada/PontealdiaconlaU1.png'); cursor:pointer;">
+                    <div class="card-overlay">
+                        <h4>Ponte al día con la U</h4>
+                        <p>Microespacios formativos para actualizaciones rápidas o información clave.</p>
+                        <span class="btn-ver-mas">Conoce más</span>
+                    </div>
+                    <h3>Ponte al día con la U</h3>
+                </div>
+
+                <div class="card-item open-modal" data-modal="modal6" style="background-image: url('../assets/popups/Portada/FlashconlaU1.png'); cursor:pointer;">
+                    <div class="card-overlay">
+                        <h4>Flash con la U</h4>
+                        <p>Capacitaciones que requieren un mayor tiempo de desarrollo y despliegue, orientadas a brindar conocimientos más profundos o específicos.</p>
+                        <span class="btn-ver-mas">Conoce más</span>
+                    </div>
+                    <h3>Flash con la U</h3>
+                </div>
+
+                <div class="card-item open-modal" data-modal="modal7" style="background-image: url('../assets/popups/Portada/CertificateconlaU1.png'); cursor:pointer;">
+                    <div class="card-overlay">
+                        <h4>Certifícate con la U</h4>
+                        <p>Certificación que evalúa conocimientos técnicos sobre temáticas de formación...</p>
+                        <span class="btn-ver-mas">Conoce más</span>
+                    </div>
+                    <h3>Certifícate con la U</h3>
+                </div>
+
+                <div class="card-item open-modal" data-modal="modal8" style="background-image: url('../assets/popups/Portada/ConversemosconlaU1.png'); cursor:pointer;">
+                    <div class="card-overlay">
+                        <h4>Conversemos con la U</h4>
+                        <p>Espacios de formación orientados al refuerzo de conocimientos según necesidades específicas por región, canal o BPO.</p>
+                        <span class="btn-ver-mas">Conoce más</span>
+                    </div>
+                    <h3>Conversemos con la U</h3>
+                </div>
+
+                <div class="card-item open-modal" data-modal="modal9" style="background-image: url('../assets/popups/Portada/Escuelasdehabilidades1.png'); cursor:pointer;">
+                    <div class="card-overlay">
+                        <h4>Escuelas de habilidades</h4>
+                        <p>Procesos de formación continua enfocados en el desarrollo...</p>
+                        <span class="btn-ver-mas">Conoce más</span>
+                    </div>
+                    <h3>Escuelas de habilidades</h3>
+                </div>
+
+            </div>
+    </div>
+</main>
+
+<div id="modal1" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar">&times;</span>
+        <div class="texto">
+            <h3>Formación Presencial</h3>
+
+            <p>
+                La formación presencial ofrece un entorno inmersivo donde el intercambio directo con expertos y compañeros potencia el aprendizaje colectivo. A través de talleres, sesiones prácticas y actividades colaborativas, desarrollamos habilidades clave en un espacio dinámico y participativo, ideal para fortalecer el compromiso y aplicar el conocimiento de forma tangible.
+            </p>
+        </div>
+        <div class="imagen-contenedor">
+            <img src="../assets/popups/ContPopup/Formacion1.png" alt="Formación Presencial">
+        </div>
+    </div>
+</div>
+
+<div id="modal2" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar">&times;</span>
+        <div class="texto">
+            <h3>Formación Virtual</h3>
+            <h4>¡Rompe límites: Aprende en cualquier momento, desde cualquier lugar!</h4>
+            <p>
+            A través de plataformas sólidas y contenidos interactivos, ofrecemos experiencias adaptadas a cada estilo de aprendizaje. Esta modalidad impulsa la autogestión, la actualización constante y la autonomía, todo dentro de un entorno digital intuitivo, accesible y pensado para evolucionar con el talento.                </p>
+        </div>
+        <div class="imagen-contenedor">
+            <img src="../assets/popups/ContPopup/Formacion2.png" alt="Formación Online">
+        </div>
+    </div>
+</div>
+
+<div id="modal3" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar">&times;</span>
+        <div class="texto">
+            <h3>Formación Telepresencial</h3>
+            <h4>¡Lo mejor de dos mundos para formar sin límites!</h4>
+            <p>Combina la cercanía de la formación en vivo con la flexibilidad de lo digital. A través de sesiones sincrónicas guiadas por expertos, promueve la participación activa, la interacción en tiempo real y el aprendizaje colaborativo, manteniendo el acompañamiento directo sin perder eficiencia ni alcance.</p>
+        </div>
+        <div class="imagen-contenedor">
+            <img src="../assets/popups/ContPopup/formacion3.png" alt="Formación Híbrida">
+        </div>
+    </div>
+</div>
+
+<div id="modal4" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar">&times;</span>
+        <div class="texto">
+            <h3>Fórmate en línea</h3>
+            <h4></h4>
+            <p><b>Duración:</b> Espacios breves de 15 a 30 minutos.
+                <br>
+                <b>Canales:</b> Disponible en todos los canales.
+                <br>
+                <b>Descripción:</b> Recursos formativos virtuales de corta duración y autoestudio, ideales para adquirir información clave de forma ágil y flexible.</p>
+            </div>
+            <div class="imagen-contenedor">
+                <img src="../assets/popups/ContPopup/Formatoenlinea2.png" alt="Fórmate en línea">
+            </div>
+        </div>
+    </div>
+
+<div id="modal5" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar">&times;</span>
+        <div class="texto">
+            <h3>Ponte al día con la U</h3>
+            <h4></h4>
+            <p><b>Duración:</b> Espacios de 15 a 30 minutos.
+                <br>
+                <b>Canales:</b> CAV y Call Center
+                <br>
+                <b>Descripción:</b> Microespacios formativos para
+            actualizaciones rápidas o información clave.</p>
+        </div>
+        <div class="imagen-contenedor">
+            <img src="../assets/popups/ContPopup/PontealdiaconlaU2.png" alt="Ponte al día con la U">
+        </div>
+    </div>
+</div>
+
+<div id="modal6" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar">&times;</span>
+        <div class="texto">
+            <h3>Flash con la U</h3>
+            <h4></h4>
+            <p><b>Duración:</b> Espacios de 1 hora o más.
+                <br>
+                <b>Canales:</b> Todos
+                <br>
+                <b>Descripción:</b> Capacitaciones que requieren un mayor
+                tiempo de desarrollo y despliegue. Están orientadas a
+            brindar conocimientos más profundos o específicos.</p>
+        </div>
+        <div class="imagen-contenedor">
+            <img src="../assets/popups/ContPopup/FlashconlaU2.png" alt="Flash con la U">
+        </div>
+    </div>
+</div>
+
+<div id="modal7" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar">&times;</span>
+        <div class="texto">
+            <h3>Certifícate con la U</h3>
+            <h4></h4>
+            <p><b>Duración:</b> Variable
+                <br>
+                <b>Canales:</b> Todos
+                <br>
+                <b>Descripción:</b> Certificación que evalúa conocimientos técnicos sobre temáticas de formación desplegadas durante el mes, en un canal de ventas o servicio determinado.</p>
+            </div>
+            <div class="imagen-contenedor">
+                <img src="../assets/popups/ContPopup/CertificateconlaU2.png" alt="Certificate con la U">
+            </div>
+        </div>
+    </div>
+
+<div id="modal8" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar">&times;</span>
+        <div class="texto">
+            <h3>Conversemos con la U</h3>
+            <h4></h4>
+            <p><b>Duración:</b> Variable
+                <br>
+                <b>Canales:</b> Todos (espacios focalizados)
+                <br>
+                <b>Descripción:</b> Espacios de formación orientados al
+                refuerzo de conocimientos según necesidades
+            específicas por región, canal o BPO.</p>
+        </div>
+        <div class="imagen-contenedor">
+            <img src="../assets/popups/ContPopup/ConversemosconlaU2.png" alt="Conversemos con la U">
+        </div>
+    </div>
+</div>
+
+<div id="modal9" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar">&times;</span>
+        <div class="texto">
+            <h3>Escuelas de habilidades</h3>
+            <h4></h4>
+            <p><b>Duración:</b> Variable
+                <br>
+                <b>Canales:</b> Todos
+                <br>
+                <b>Descripción:</b> Procesos de formación continua
+                enfocados en el desarrollo de competencias y
+            habilidades específicas.</p>
+        </div>
+        <div class="imagen-contenedor">
+            <img src="../assets/popups/ContPopup/Escuelasdehabilidades2.png" alt="Escuelas de habilidades">
+        </div>
+    </div>
+</div>
+
+<div class="btn-container">
+    <a href="../servicios.html" class="btn">Volver a Servicios</a>
+</div>
+<footer class="footer">
+    <div class="container footer-container">
+        <div class="footer-logo">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logofooter.png" alt="Logo Universidad Claro">
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="copyright">
+            &copy; 2025 Claro.com. Todos los derechos reservados.
+        </div>
+    </div>
+</footer>
+
+<script src="../js/scripts.js"></script>
+<script>
+        // Funcionalidad para los modales
+    document.addEventListener('DOMContentLoaded', function() {
+            // Abrir modales
+        const openModalButtons = document.querySelectorAll('.open-modal');
+        openModalButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const modalId = this.getAttribute('data-modal');
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+            // Cerrar modales
+        const closeButtons = document.querySelectorAll('.cerrar');
+        closeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const modal = this.closest('.modal');
+                if (modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+
+            // Cerrar al hacer clic fuera del modal
+        window.addEventListener('click', function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

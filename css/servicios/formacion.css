@@ -1,0 +1,208 @@
+/* Estilos específicos para la página de formación */
+
+/* Hero Section - Personalizado para Formación */
+.hero-formacion {
+    height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80') 
+                center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-formacion h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Caja de modalidades - Cambiada a rojo (#e74c3c) */
+.modalidades-box {
+    background-color: #cf2028; /* Color rojo */
+    padding-top: 5px;
+    border-radius: var(--border-radius);
+    margin-bottom: 60px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+.modalidades-box h2 {
+    color: white;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+/* Modales de formación - X dentro de la caja */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contenido {
+    display: flex;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 900px;
+    width: 90%;
+    max-height: 85vh;
+    animation: aparecer 0.4s ease-out;
+    position: relative; /* Para posicionar la X */
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.texto {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.texto h3 {
+    color: #cf2028;
+    margin-bottom: 15px;
+    font-size: 28px;
+    text-align: center;
+}
+
+.texto h4 {
+    color: rgb(22, 142, 169); 
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.texto p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.imagen-contenedor {
+    flex: 1;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.imagen-contenedor img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* X dentro del modal */
+.cerrar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #555;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+}
+
+.cerrar:hover {
+    color: #cf2028; /* Color rojo */
+    transform: rotate(90deg);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive design para página de formación */
+@media (max-width: 992px) {
+    .hero-formacion h1 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-formacion {
+        height: 50vh;
+    }
+    
+    .hero-formacion h1 {
+        font-size: 2.2rem;
+    }
+    
+    .modal-contenido {
+        flex-direction: column;
+        max-height: 90vh;
+    }
+    
+    .imagen-contenedor {
+        max-height: 250px;
+        padding: 15px;
+    }
+    
+    .cerrar {
+        top: 10px;
+        right: 10px;
+        font-size: 25px;
+        width: 25px;
+        height: 25px;
+    }
+    
+    .formacion-img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-formacion {
+        height: 40vh;
+    }
+    
+    .hero-formacion h1 {
+        font-size: 1.8rem;
+    }
+    
+    .modalidades-box {
+        padding: 25px 15px;
+    }
+    
+    .modalidades-box h2 {
+        font-size: 1.5rem;
+    }
+    
+    .cerrar {
+        top: 10px;
+        right: 10px;
+        font-size: 25px;
+        width: 25px;
+        height: 25px;
+    }
+    
+    .formacion-img {
+        height: 180px;
+    }
+}

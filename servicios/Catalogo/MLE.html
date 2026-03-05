@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo claro</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../css/catalogo/stylesPages.css?aaa">
+    
+    <style>
+        .custom-table-container {
+            padding: 20px;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
+
+        .custom-table-header {
+            display: flex;
+            border-radius: 8px 8px 0 0;
+            overflow: hidden;
+        }
+
+        .custom-table-header div {
+            flex: 1;
+            padding: 15px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .custom-table-header .soluciones {
+            background-color: #c00000;
+            /* Rojo oscuro */
+        }
+
+        .custom-table-header .tiempo-resolucion {
+            background-color: #00afb0;
+            /* Verde azulado */
+        }
+
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+            border-top: none;
+        }
+
+        .custom-table th,
+        .custom-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .custom-table th {
+            background-color: #f2f2f2;
+            font-weight: 600;
+        }
+
+        .custom-table td {
+            background-color: #ffffff;
+        }
+    </style>
+    
+</head>
+
+<body>
+
+    <div class="container">
+        <!--Encabezado-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 p-0">
+                    <div class="encabezado">
+                        <img class="img-fluid w-100" src="../../assets/images/pages/MLE.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid bg-white">
+            <div class="row">
+                <di class="col-12">
+                    <p class="text-center m-4 p-4">
+                        <strong>
+                            El microlearning es una metodología de aprendizaje innovadora que presenta los contenidos en breves segmentos, con el fin de maximizar la retención y la aplicabilidad del conocimiento. Esta estrategia permite a los usuarios aprender de forma eficiente y a su propio ritmo. Además, puede utilizarse para el desarrollo de trivias, minijuegos, ruletas o quizzes gamificados.
+                            <br><br>
+                            ¡Explora los mejores contenidos y transforma la experiencia de capacitación con recursos dinámicos y efectivos! 
+                        </strong>
+                    </p>
+                </di>
+            </div>
+        </div>
+
+        <div class="fondo d-flex flex-column align-items-center text-center ">
+
+            <div class="w-60 definicion">
+                <p class="p-3 m-0">
+                    Este recurso se utiliza para que el usuario se forme de manera autónoma en el uso de aplicaciones y
+                    en
+                    la adquisición de habilidades blandas.
+                </p>
+            </div>
+
+            <div class="video w-75 mt-4">
+                <div class="container-fluid">
+                    <div class="row">
+
+
+                        <div class="container-fluid">
+                            <div class="row">
+
+                                <div class="col-12 mt-3">
+                                    <div class="icono-texto">
+                                        <img src="../../assets/images/pages/icono.svg" alt="Icono">
+                                        <h2 class="mt-2"><strong>Libro Digital CAV</strong></h2>
+                                    </div>
+                                    <div class="container-video">
+                                        <iframe
+                                        src="../../assets/examples/librodigitalcav/story.html"
+                                        frameborder="0"></iframe>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <div class="icono-texto">
+                                        <img src="../../assets/images/pages/icono.svg" alt="Icono">
+                                        <h2 class="mt-2"><strong>Microlearning PBX enlace directo E&N</strong></h2>
+                                    </h2>
+                                </div>
+                                <div class="container-video">
+                                    <iframe
+                                    src="../../assets/examples/pbxenlacedirecto/story.html"
+                                    frameborder="0"></iframe>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla-->
+
+
+        <div class="custom-table-container">
+            <div class="custom-table-header">
+                <div class="tiempo-resolucion">
+                    Tiempo de resolución (HH/L-V)<br>
+                    8:00 am a 5:00 pm
+                </div>
+            </div>
+            <table class="custom-table">
+                <thead>
+                    <tr>
+                        <th class="text-center">Tipo de requerimiento</th>
+                        <th class="text-center">Descripción</th>
+                        <th class="text-center">Primera respuesta</th>
+                        <th class="text-center">Resolución</th>
+                        <th class="text-center">Total SLA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center">Microlearning</td>
+                        <td> Objeto de aprendizaje de corta duración (3 a 8 minutos de consumo) con principios de gamificación, cuyo objetivo es capacitar de una manera rápida y didáctica.</td>
+                        <td class="text-center">2</td>
+                        <td class="text-center">36</td>
+                        <td class="text-center">38</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+        <div class="mt-4 w-75 d-flex justify-content-end"> <!-- Alinear el botón a la derecha -->
+            <a class="enlace" style="margin-right: 10px;" href="../../servicios/contenidos.html">
+                <button class="boton">
+                    <strong> Volver al Inicio</strong>
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Pie de página -->
+<footer class="bg-dark text-white text-center py-4">
+    <p>© 2024. Todos los derechos reservados.</p>
+</footer>
+
+<!-- Bootstrap JS y dependencias -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+</body>
+
+</html>

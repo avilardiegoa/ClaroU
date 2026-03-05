@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios</title>
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components/navbar.css">
+    <link rel="stylesheet" href="css/components/cards.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/servicios/servicios.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="Logo Universidad Claro">
+            </a>
+            
+            <!-- CAMBIO: Añadido el ícono del menú de hamburguesa para la vista responsive. -->
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="categorias.html" class="nav-link">Categorías</a>
+                </div>
+                
+                <div class="nav-item dropdown">
+                    <a href="servicios.html" class="nav-link">Servicios</a>
+                    <div class="dropdown-content">
+                        <a href="servicios.html">Inicio</a>
+                        <a href="servicios/formacion.html">Formación</a>
+                        <a href="servicios/contenidos.html">Contenidos</a>
+                        <a href="servicios/comunicacion.html">Comunicación</a>
+                        <a href="servicios/sistemas.html">Herramientas de apoyo</a>
+                        <a href="servicios/mediciones-reportes.html">Mediciones y Reportes</a>
+                    </div>
+                </div>
+                
+                <div class="nav-item search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="search" class="search-bar" placeholder="Buscar...">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background: url('assets/Banner/servicios.png') center/cover no-repeat;">
+        <div class="hero-content">
+            <h1>Servicios</h1>
+        </div>
+    </section>
+
+    <!-- Contenido Principal -->
+    <main class="content">
+        <div class="container">
+            <h3 class="section-title">Tenemos diferentes servicios según tus necesidades.
+                ¡Aprende sobre cada uno para saber cuál se ajusta a ti!</h3>
+            
+            
+            <div class="cards-container">
+                <!-- Tarjeta 1: Formación -->
+                <a href="servicios/formacion.html" class="card-item" style="background-image: url('assets/popups/Portada/Servicio1.png');">
+                    <div class="card-overlay">
+                        <h4>Formación</h4>
+                        <span class="btn-ver-mas">¡Conoce más!</span>
+                    </div>
+                    <h3>Formación</h3>
+                </a>
+                
+                <!-- Tarjeta 2: Contenidos -->
+                <a href="servicios/contenidos.html" class="card-item" style="background-image: url('assets/popups/Portada/Servicio2.png');">
+                    <div class="card-overlay">
+                        <h4>Contenidos</h4>
+                        <span class="btn-ver-mas">¡Conoce más!</span>
+                    </div>
+                    <h3>Contenidos</h3>
+                </a>
+
+                <!-- Tarjeta 3: Comunicación -->
+                <a href="servicios/comunicacion.html" class="card-item" style="background-image: url('assets/popups/Portada/Servicio3.png');">
+                    <div class="card-overlay">
+                        <h4>Comunicación</h4>
+                        <span class="btn-ver-mas">¡Conoce más!</span>
+                    </div>
+                    <h3>Comunicación</h3>
+                </a>
+
+                <!-- Tarjeta 4: Sistemas -->
+                <a href="servicios/sistemas.html" class="card-item" style="background-image: url('assets/popups/Portada/Servicio4.png');">
+                    <div class="card-overlay">
+                        <h4>Herramientas de apoyo</h4>
+                        <span class="btn-ver-mas">¡Conoce más!</span>
+                    </div>
+                    <h3>Herramientas de apoyo</h3>
+                </a>
+
+                <!-- Tarjeta 5: Mediciones y Reportes -->
+                <a href="servicios/mediciones-reportes.html" class="card-item" style="background-image: url('assets/popups/Portada/Servicio5.png');">
+                    <div class="card-overlay">
+                        <h4>Mediciones y Reportes</h4>
+                        <span class="btn-ver-mas">¡Conoce más!</span>
+                    </div>
+                    <h3>Mediciones y Reportes</h3>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-logo">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logofooter.png" alt="Logo Universidad Claro">
+                </a>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="copyright">
+                &copy; 2025 Claro.com. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>

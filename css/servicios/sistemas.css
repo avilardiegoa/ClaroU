@@ -1,0 +1,161 @@
+.formacion-cards-row {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap; /* Comportamiento por defecto para móviles y tablets */
+}
+
+#sistemas-page .card-item {
+    width: 280px; /* Reducir el ancho de la tarjeta */
+    flex-shrink: 0;
+}
+
+/* Media Query para pantallas grandes (escritorio) */
+@media (min-width: 1280px) {
+    .formacion-cards-row {
+        flex-wrap: nowrap; /* Forzar la disposición 4-3 en pantallas grandes */
+    }
+}
+
+/* Estilos para el nuevo título con borde y fuente personalizada */
+.custom-title-container {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.custom-title {
+    font-family: 'AMX-Bold', sans-serif; /* Aplica la fuente personalizada */
+    font-size: 3rem; /* Tamaño de fuente grande */
+    color: #168ea9; /* Color azul para el texto */
+    /* Crea un borde blanco usando múltiples sombras de texto */
+    text-shadow: 
+        -1px -1px 0 #fff,  
+         1px -1px 0 #fff,
+        -1px  1px 0 #fff,
+         1px  1px 0 #fff,
+        -2px -2px 3px #fff,
+         2px -2px 3px #fff,
+        -2px  2px 3px #fff,
+         2px  2px 3px #fff;
+    display: inline-block;
+    position: relative;
+    padding: 0 10px;
+}
+
+/* Estilos para el contenido del modal en la página de sistemas */
+#sistemas-page .modal-contenido {
+    flex-direction: column;
+}
+
+#sistemas-page .modal-top-content {
+    display: flex;
+    align-items: center;
+}
+
+#sistemas-page .imagen-contenedor {
+    background: none;
+}
+
+/* Estilos para la tabla en el modal */
+.modal-table-container {
+    padding: 20px 40px 40px; /* Añadido padding inferior para dar espacio */
+}
+
+.modal-table-header {
+    display: flex;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+}
+
+.modal-table-header div {
+    flex: 1;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.modal-table-header .soluciones {
+    background-color: #cf2028; /* Rojo oscuro */
+}
+
+.modal-table-header .tiempo-resolucion {
+    background-color: #168ea9; /* Verde azulado */
+}
+
+.modal-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+.modal-table th, .modal-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.modal-table th {
+    background-color: #f2f2f2;
+    font-weight: 600;
+}
+
+.modal-table td {
+    background-color: #ffffff;
+} 
+
+/* Ajustes para el scroll y contenido largo en modales de Sistemas */
+#sistemas-page .modal-contenido {
+    overflow-y: auto;
+}
+
+#sistemas-page .texto {
+    overflow-y: visible;
+}
+
+#modal2 .modal-table-container,
+#modal3 .modal-table-container,
+#modal6 .modal-table-container,
+#modal7 .modal-table-container {
+    padding-top: 10px;
+}
+
+.accordion-container {
+    margin-top: 20px;
+    padding: 0 40px 20px;
+}
+
+.accordion-btn {
+    background-color: #f1f1f1;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+.accordion-btn.active, .accordion-btn:hover {
+    background-color: #ddd;
+}
+
+.accordion-content {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-radius: 8px;
+}
+
+.accordion-content p {
+    padding: 15px 5px;
+} 

@@ -1,0 +1,38 @@
+/* Estilos del Footer */
+.footer {
+    background-color: #cf2028;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Nuevo estilo para la imagen del logo en el footer */
+.footer-logo .logo img {
+    height: 90px; /* Altura del nuevo logo */
+    width: auto;
+    align-items: center;
+}
+
+
+
+.copyright {
+    text-align: center;
+    padding-top: 0px;
+    margin-top: 15px;
+    border-top: 0px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+/* Responsive para footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+}
