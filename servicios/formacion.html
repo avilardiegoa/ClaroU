@@ -96,6 +96,60 @@
             font-weight: bold;
             font-size: 1.2em;
         }
+
+        /* ====================================================== */
+        /* WEB NORMAL (Mantiene los estilos de tus CSS externos)  */
+        /* ====================================================== */
+        .modal-contenido .imagen-contenedor {
+            display: block; 
+        }
+
+        /* ====================================================== */
+        /* WEB MOVIL (Responsive)                                 */
+        /* ====================================================== */
+        @media screen and (max-width: 768px) {
+            
+            /* Ajuste general del contenido del modal para evitar que se salga de pantalla */
+            .modal-contenido {
+                flex-direction: column !important; 
+                max-height: 85vh !important; 
+                overflow-y: auto !important; 
+                padding: 20px 15px !important;
+            }
+
+            /* Ocultar imágenes en modales solo en móviles */
+            .modal-contenido .imagen-contenedor {
+                display: none !important;
+            }
+
+            /* El texto toma todo el espacio y ajusta tamaño */
+            .modal-contenido .texto {
+                width: 100% !important;
+                padding: 0 !important;
+            }
+            
+            .modal-contenido .texto h3 {
+                font-size: 1.3rem !important;
+                margin-top: 15px;
+            }
+            
+            .modal-contenido .texto p {
+                font-size: 1rem !important;
+            }
+
+            /* Ajuste para la caja del botón rojo en móviles */
+            .btn-modelo-rojo {
+                font-size: 18px;
+                padding: 12px 20px;
+                white-space: normal;
+                line-height: 1.3;
+            }
+
+            /* Ajuste para el hero-formacion (opcional, para evitar que quede enorme en movil) */
+            .hero-formacion {
+                padding: 40px 15px !important;
+            }
+        }
     </style>
 </head>
 <body>
