@@ -12,6 +12,21 @@
     <link rel="stylesheet" href="../css/servicios/formacion.css">
 
     <style>
+         /* ====================================================== */
+        /* FIX: DOMESTICAR EL LOGO EN MÓVILES                     */
+        /* ====================================================== */
+        @media screen and (max-width: 768px) {
+            .logo img {
+                max-width: 70px !important; /* Limita el ancho del logo */
+                height: auto !important;
+                display: block;
+            }
+            
+            /* Asegura que el contenedor de la navbar no colapse raro */
+            .nav-container {
+                align-items: center !important;
+            }
+        }
         .btn-modelo-rojo {
             background-color: #CF2028;
             color: #ffffff;
@@ -24,7 +39,6 @@
         }
 
         .fondo-ondas-seccion {
-            /* REEMPLAZA ESTA RUTA POR LA IMAGEN DE TU FONDO GRIS CON ONDAS */
             background-color: #EFEFEF; 
             background-image: url('../assets/act/fondo.png'); 
             background-size: cover;
@@ -72,7 +86,7 @@
         }
 
         .palabra-teal {
-            color: #1693AE; /* Color azul/verde del pantallazo */
+            color: #1693AE;
             font-weight: bold;
         }
 
@@ -98,10 +112,18 @@
         }
 
         /* ====================================================== */
-        /* WEB NORMAL (Mantiene los estilos de tus CSS externos)  */
+        /* WEB NORMAL (Mantiene los estilos de PC)                */
         /* ====================================================== */
         .modal-contenido .imagen-contenedor {
             display: block; 
+        }
+
+        .d-mobile {
+            display: none; /* Ocultamos la versión de texto en PC */
+        }
+        
+        .d-desktop {
+            display: block; /* Mostramos la imagen en PC */
         }
 
         /* ====================================================== */
@@ -109,7 +131,7 @@
         /* ====================================================== */
         @media screen and (max-width: 768px) {
             
-            /* Ajuste general del contenido del modal para evitar que se salga de pantalla */
+            /* Modales */
             .modal-contenido {
                 flex-direction: column !important; 
                 max-height: 85vh !important; 
@@ -117,12 +139,10 @@
                 padding: 20px 15px !important;
             }
 
-            /* Ocultar imágenes en modales solo en móviles */
             .modal-contenido .imagen-contenedor {
                 display: none !important;
             }
 
-            /* El texto toma todo el espacio y ajusta tamaño */
             .modal-contenido .texto {
                 width: 100% !important;
                 padding: 0 !important;
@@ -137,7 +157,6 @@
                 font-size: 1rem !important;
             }
 
-            /* Ajuste para la caja del botón rojo en móviles */
             .btn-modelo-rojo {
                 font-size: 18px;
                 padding: 12px 20px;
@@ -145,10 +164,66 @@
                 line-height: 1.3;
             }
 
-            /* Ajuste para el hero-formacion (opcional, para evitar que quede enorme en movil) */
             .hero-formacion {
                 padding: 40px 15px !important;
             }
+
+            /* Alternativa para la imagen 3E en móvil */
+            .d-desktop { 
+                display: none !important; /* Ocultamos la imagen en móvil */
+            }
+            
+            .d-mobile { 
+                display: flex !important; /* Mostramos los cuadros de texto en móvil */
+                flex-direction: column; 
+                gap: 15px; 
+                margin-bottom: 35px; 
+            }
+            
+            .box-3e {
+                background: #ffffff;
+                border-radius: 8px;
+                padding: 15px;
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                border: 2px solid;
+                box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+            }
+            
+            .box-3e p {
+                margin: 0;
+                font-size: 14px !important;
+                line-height: 1.3;
+                color: #333;
+                text-align: left;
+            }
+            
+            .number-3e {
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                font-size: 16px;
+                font-weight: bold;
+                flex-shrink: 0;
+            }
+            
+            /* Colores inspirados en el pantallazo */
+            .box-blue { border-color: #2F9FB3; }
+            .box-blue .number-3e { background-color: #2F9FB3; }
+            
+            .box-orange { border-color: #F39200; }
+            .box-orange .number-3e { background-color: #F39200; }
+            
+            .box-red { border-color: #CF2028; }
+            .box-red .number-3e { background-color: #CF2028; }
+            
+            .box-teal { border-color: #008C99; }
+            .box-teal .number-3e { background-color: #008C99; }
         }
     </style>
 </head>
@@ -215,7 +290,26 @@
                 El modelo 3E enfoca su acción en el desarrollo de experiencias de aprendizaje en diferentes ámbitos, las cuales deben permitir:
             </div>
 
-            <img src="../assets/act/tabla.png" alt="Gráfico 3 E" class="imagen-3e-placeholder">
+            <img src="../assets/act/tabla.png" alt="Gráfico 3 E" class="imagen-3e-placeholder d-desktop">
+
+            <div class="grafico-3e-mobile d-mobile">
+                <div class="box-3e box-blue">
+                    <div class="number-3e">1</div>
+                    <p>La comprensión de la información.</p>
+                </div>
+                <div class="box-3e box-orange">
+                    <div class="number-3e">2</div>
+                    <p>Una experiencia como elemento clave del aprendizaje.</p>
+                </div>
+                <div class="box-3e box-red">
+                    <div class="number-3e">3</div>
+                    <p>La interacción con el otro como pieza de aporte fundamental.</p>
+                </div>
+                <div class="box-3e box-teal">
+                    <div class="number-3e">4</div>
+                    <p>La aplicación de lo aprendido en el contexto de la labor.</p>
+                </div>
+            </div>
 
             <div class="caja-blanca caja-detalles">
                 <p style="margin-bottom: 20px;">
@@ -532,9 +626,7 @@
 
 <script src="../js/scripts.js"></script>
 <script>
-        // Funcionalidad para los modales
     document.addEventListener('DOMContentLoaded', function() {
-            // Abrir modales
         const openModalButtons = document.querySelectorAll('.open-modal');
         openModalButtons.forEach(button => {
             button.addEventListener('click', function() {
@@ -547,7 +639,6 @@
             });
         });
 
-            // Cerrar modales
         const closeButtons = document.querySelectorAll('.cerrar');
         closeButtons.forEach(button => {
             button.addEventListener('click', function() {
@@ -559,7 +650,6 @@
             });
         });
 
-            // Cerrar al hacer clic fuera del modal
         window.addEventListener('click', function(event) {
             const modals = document.querySelectorAll('.modal');
             modals.forEach(modal => {

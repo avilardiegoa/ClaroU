@@ -13,6 +13,21 @@
     <link rel="stylesheet" href="../css/servicios/sistemas.css">
     <link rel="stylesheet" href="../css/servicios/comunicacion.css">
     <style>
+         /* ====================================================== */
+        /* FIX: DOMESTICAR EL LOGO EN MÓVILES                     */
+        /* ====================================================== */
+        @media screen and (max-width: 768px) {
+            .logo img {
+                max-width: 70px !important; /* Limita el ancho del logo */
+                height: auto !important;
+                display: block;
+            }
+            
+            /* Asegura que el contenedor de la navbar no colapse raro */
+            .nav-container {
+                align-items: center !important;
+            }
+        }
         /* =========================================
            TABLAS
            ========================================= */
@@ -41,7 +56,7 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            gap: 20px; /* Separa las flechas de las imágenes */
+            gap: 20px;
         }
         .card-carousel {
             width: 90%;
@@ -84,7 +99,7 @@
             flex-shrink: 0;
         }
         .card-carousel-control:hover {
-            background-color: #3fa1b3; /* Color teal de Claro */
+            background-color: #3fa1b3;
             color: white;
             box-shadow: 0 8px 20px rgba(63, 161, 179, 0.4);
             transform: scale(1.08);
@@ -105,7 +120,7 @@
            ========================================= */
            .cards-grid-container {
             display: grid;
-            grid-template-columns: repeat(4, 1fr); /* 4 en una fila */
+            grid-template-columns: repeat(4, 1fr);
             gap: 20px; 
             width: 100%;
             max-width: 1200px; 
@@ -114,7 +129,7 @@
         }
         .card-custom-item {
             height: 380px; 
-            background-size: contain; /* Evita que el texto de la imagen se corte */
+            background-size: contain; 
             background-position: center;
             background-repeat: no-repeat;
             border-radius: 12px;
@@ -224,16 +239,69 @@
             .card-custom-item { height: 320px; }
             .card-slide { flex: 0 0 calc(100% / 2); }
         }
+        
+        /* ====================================================== */
+        /* WEB MOVIL (Responsive)                                 */
+        /* ====================================================== */
         @media (max-width: 768px) {
-            .card-carousel-control { width: 45px; height: 45px; font-size: 18px; }
-            .card-carousel-container { gap: 10px; }
             .modal-top-content { flex-direction: column; }
             .modal-top-content .imagen-contenedor { text-align: center; }
+
+            /* AJUSTE PARA CENTRAR PERFECTAMENTE EL CARRUSEL */
+            .card-carousel-wrapper {
+                width: 100% !important;
+                padding: 15px 0;
+            }
+            .card-carousel-container { 
+                gap: 0; 
+                width: 100%; 
+            }
+            .card-carousel {
+                width: 100%; 
+            }
+            .card-slide {
+                padding: 0 50px; /* Reservamos espacio a los lados para las flechas */
+                display: flex;
+                justify-content: center; /* Esto garantiza que la tarjeta quede en el centro exacto */
+                align-items: center;
+            }
+            
+            /* Flechas flotantes perfectamente alineadas */
+            .card-carousel-control { 
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 45px; 
+                height: 45px; 
+                font-size: 18px; 
+                background-color: #ffffff;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+                z-index: 20;
+            }
+            .card-carousel-control.prev { left: 5px; }
+            .card-carousel-control.next { right: 5px; }
+
+            /* Tarjetas controladas para que no se deformen ni dejen espacios raros */
+            .card-carousel .card-item {
+                width: 100%;
+                max-width: 320px; /* Evita que crezca desproporcionadamente en móviles L */
+                height: 380px !important; /* Altura ideal de la tarjeta */
+                background-size: contain !important; /* Muestra sin recortes */
+                background-position: center !important; /* Centrado absoluto */
+                background-repeat: no-repeat !important;
+                background-color: transparent;
+                margin: 0 auto;
+            }
         }
+        
         @media (max-width: 600px) {
             .cards-grid-container { grid-template-columns: 1fr; }
             .card-custom-item { height: 350px; }
             .card-slide { flex: 0 0 100%; }
+            /* Pequeño ajuste de altura para pantallas S/M */
+            .card-carousel .card-item {
+                height: 350px !important;
+            }
         }
     </style>
 </head>
@@ -314,29 +382,6 @@
         <button class="card-carousel-control next"><i class="fas fa-chevron-right"></i></button>
     </div>
 </div>
-
-<!--main>
-    <div class="container">
-        <div class="cards-grid-container">
-            <div class="card-custom-item open-modal" data-modal="modal1" style="background-image: url('../assets/popups/Portada/Comunicacion1.png');">
-                <div class="card-overlay"><span class="btn-ver-mas-modal">Conoce más</span></div>
-            </div>
-            
-            <div class="card-custom-item open-modal" data-modal="modal2" style="background-image: url('../assets/popups/Portada/comunicacion2.png');">
-                <div class="card-overlay"><span class="btn-ver-mas-modal">Conoce más</span></div>
-            </div>
-            
-            <div class="card-custom-item open-modal" data-modal="modal3" style="background-image: url('../assets/popups/Portada/comunicacion3.png');">
-                <div class="card-overlay"><span class="btn-ver-mas-modal">Conoce más</span></div>
-            </div>
-
-            <div class="card-custom-item open-modal" data-modal="modal4" style="background-image: url('../assets/popups/Portada/comunicacion4.png');">
-                <div class="card-overlay"><span class="btn-ver-mas-modal">Conoce más</span></div>
-            </div>
-        </div>
-        
-    </div>
-</main-->
 
 <div id="modal1" class="modal">
     <div class="modal-contenido">

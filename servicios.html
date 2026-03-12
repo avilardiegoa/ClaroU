@@ -4,24 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios</title>
-    <!-- Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Estilos propios -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/components/navbar.css">
     <link rel="stylesheet" href="css/components/cards.css">
     <link rel="stylesheet" href="css/components/footer.css">
     <link rel="stylesheet" href="css/servicios/servicios.css">
+
+    <style>
+        /* ====================================================== */
+        /* FIX: DOMESTICAR EL LOGO EN MÓVILES                     */
+        /* ====================================================== */
+        @media screen and (max-width: 768px) {
+            .logo img {
+                max-width: 70px !important; /* Limita el ancho del logo */
+                height: auto !important;
+                display: block;
+            }
+            
+            /* Asegura que el contenedor de la navbar no colapse raro */
+            .nav-container {
+                align-items: center !important;
+            }
+        }
+        /* ====================================================== */
+        /* WEB MOVIL (Responsive)                                 */
+        /* ====================================================== */
+        
+        /* Solución infalible para el scroll horizontal no deseado */
+        html, body {
+            overflow-x: hidden !important;
+            width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        /* Ajustes para móviles L y Tablets (hasta 768px) */
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 100% !important;
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+                box-sizing: border-box !important;
+            }
+            .cards-container {
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr) !important; 
+                gap: 15px !important;
+                width: 100% !important;
+                padding: 0 !important;
+                margin: 0 auto !important;
+                box-sizing: border-box !important;
+            }
+            .card-item {
+                width: 100% !important;
+                height: 220px !important; 
+                background-size: cover !important;
+                background-position: center !important;
+                margin: 0 !important; 
+                box-sizing: border-box !important;
+            }
+            .section-title {
+                font-size: 1.3rem !important;
+                padding: 0 !important;
+                line-height: 1.4 !important;
+                width: 100% !important;
+            }
+        }
+
+        /* Ajustes para móviles S y M (hasta 480px) */
+        @media screen and (max-width: 480px) {
+            .cards-container {
+                grid-template-columns: 1fr !important; /* 1 sola columna centrada */
+            }
+            .card-item {
+                height: 180px !important; /* Funciona como un banner horizontal */
+                background-size: cover !important;
+                background-position: center !important;
+            }
+            .section-title {
+                font-size: 1.15rem !important;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navbar -->
     <nav class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">
                 <img src="assets/images/logo.png" alt="Logo Universidad Claro">
             </a>
             
-            <!-- CAMBIO: Añadido el ícono del menú de hamburguesa para la vista responsive. -->
             <div class="burger-menu">
                 <i class="fas fa-bars"></i>
             </div>
@@ -51,14 +124,12 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero" style="background: url('assets/Banner/servicios.png') center/cover no-repeat;">
         <div class="hero-content">
             <h1>Servicios</h1>
         </div>
     </section>
 
-    <!-- Contenido Principal -->
     <main class="content">
         <div class="container">
             <h3 class="section-title">Tenemos diferentes servicios según tus necesidades.
@@ -66,7 +137,6 @@
             
             
             <div class="cards-container">
-                <!-- Tarjeta 1: Formación -->
                 <a href="servicios/formacion.html" class="card-item" style="background-image: url('assets/popups/Portada/Servicio1.png');">
                     <div class="card-overlay">
                         <h4>Formación</h4>
@@ -75,7 +145,6 @@
                     <h3>Formación</h3>
                 </a>
                 
-                <!-- Tarjeta 2: Contenidos -->
                 <a href="servicios/contenidos.html" class="card-item" style="background-image: url('assets/popups/Portada/Servicio2.png');">
                     <div class="card-overlay">
                         <h4>Contenidos</h4>
@@ -84,7 +153,6 @@
                     <h3>Contenidos</h3>
                 </a>
 
-                <!-- Tarjeta 3: Comunicación -->
                 <a href="servicios/comunicacion.html" class="card-item" style="background-image: url('assets/popups/Portada/Servicio3.png');">
                     <div class="card-overlay">
                         <h4>Comunicación</h4>
@@ -93,7 +161,6 @@
                     <h3>Comunicación</h3>
                 </a>
 
-                <!-- Tarjeta 4: Sistemas -->
                 <a href="servicios/sistemas.html" class="card-item" style="background-image: url('assets/popups/Portada/Servicio4.png');">
                     <div class="card-overlay">
                         <h4>Herramientas de apoyo</h4>
@@ -102,7 +169,6 @@
                     <h3>Herramientas de apoyo</h3>
                 </a>
 
-                <!-- Tarjeta 5: Mediciones y Reportes -->
                 <a href="servicios/mediciones-reportes.html" class="card-item" style="background-image: url('assets/popups/Portada/Servicio5.png');">
                     <div class="card-overlay">
                         <h4>Mediciones y Reportes</h4>
@@ -114,7 +180,6 @@
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-logo">
@@ -131,7 +196,6 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="js/scripts.js"></script>
 </body>
 </html>

@@ -11,6 +11,23 @@
     <link rel="stylesheet" href="../css/components/footer.css">
     <link rel="stylesheet" href="../css/servicios/formacion.css">
     <link rel="stylesheet" href="../css/servicios/mediciones-reportes.css">
+    <style>
+         /* ====================================================== */
+        /* FIX: DOMESTICAR EL LOGO EN MÓVILES                     */
+        /* ====================================================== */
+        @media screen and (max-width: 768px) {
+            .logo img {
+                max-width: 70px !important; /* Limita el ancho del logo */
+                height: auto !important;
+                display: block;
+            }
+            
+            /* Asegura que el contenedor de la navbar no colapse raro */
+            .nav-container {
+                align-items: center !important;
+            }
+        }
+    </style>
 </head>
 <body>
  <!-- Navbar -->

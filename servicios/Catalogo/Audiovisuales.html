@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalogo claro</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -14,10 +13,33 @@
     <link rel="stylesheet" href="../../css/catalogo/stylesPages.css?aaa">
     
     <style>
+        /* AUMENTAR ALTURA DEL BANNER EN MÓVIL */
+            .encabezado img {
+                height: 180px !important; /* Sube este número a 200 o 250 si lo quieres más gigante */
+                object-fit: cover !important;
+                object-position: center !important;
+            }
         .custom-table-container {
             padding: 0px;
             max-width: 1100px;
+            width: 100%;
             margin: 0px auto;
+            box-sizing: border-box;
+        }
+
+        /* ====================================================== */
+        /* FIX RESPONSIVE: TABLA (EL ANTÍDOTO AL OVERFLOW HIDDEN) */
+        /* ====================================================== */
+        .table-scroll-wrapper {
+            width: 100%;
+            overflow-x: auto !important;
+            -webkit-overflow-scrolling: touch; 
+            display: block;
+        }
+
+        .table-inner {
+            min-width: 750px; 
+            width: 100%;
         }
 
         .custom-table-header {
@@ -36,12 +58,10 @@
 
         .custom-table-header .soluciones {
             background-color: #c00000;
-            /* Rojo oscuro */
         }
 
         .custom-table-header .tiempo-resolucion {
             background-color: #00afb0;
-            /* Verde azulado */
         }
 
         .custom-table {
@@ -66,13 +86,26 @@
         .custom-table td {
             background-color: #ffffff;
         }
+
+        /* ====================================================== */
+        /* FIX RESPONSIVE: AJUSTES MÓVILES GENERALES              */
+        /* ====================================================== */
+        @media (max-width: 768px) {
+            .custom-table-container {
+                padding: 10px;
+            }
+            .w-75 {
+                width: 100% !important;
+                justify-content: center !important; /* Centra el botón en móviles */
+                padding-right: 0 !important;
+            }
+        }
     </style>
     
 </head>
 <body>
 
     <div class="container">
-        <!--Encabezado-->
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 p-0">
@@ -85,58 +118,60 @@
 
         <div class="container-fluid bg-white">
             <div class="row">
-                <di class="col-12">
+                <div class="col-12">
                     <p class="text-center m-4 p-4" style="font-size: 19px;">
                         Diseñamos y producimos contenidos audiovisuales que informan, conectan y refuerzan los procesos, novedades, servicio y oferta de la compañía.
                         <br><br>
                         A través de videos, piezas animadas y recursos multimedia, apoyamos la comunicación de mensajes estratégicos y campañas internas, asegurando un lenguaje visual claro, atractivo y alineado con la identidad de la compañía.
                     </p>
-                </di>
-            </div>
-
-            <!-- Tabla-->
-            <div class="custom-table-container">
-            <div class="custom-table-header">
-                <div class="tiempo-resolucion">
-                    Tiempo de resolución (HH/L-V)<br>
-                    8:00 am a 5:00 pm
                 </div>
             </div>
-            <table class="custom-table">
-                <thead>
-                    <tr>
-                        <th class="text-center">Tipo de requerimiento</th>
-                        <th class="text-center">Insumo</th>
-                        <th class="text-center">Descripción</th>
-                        <th class="text-center">Primera respuesta</th>
-                        <th class="text-center">Resolución</th>
-                        <th class="text-center">Total SLA</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="text-center">Diseño de comunicaciones cargue y despliegue</td>
-                        <td>Producción audiovisual</td>
-                        <td>
-                            <ul>
-                                <li>Edición de video con preproducción, producción y posproducción.</li>
-                                <li>GIF</li>
-                                <li>Voz en <i>off</i></li>
-                                <li><i>Jingles</i></li>
-                                <li>Fotografía</li>
-                                <li>Cortinillas de logos</li>
-                            </ul>
-                        </td>
-                        <td class="text-center">2</td>
-                        <td class="text-center">78</td>
-                        <td class="text-center">80</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
 
-            <div class="mt-4 w-75 d-flex justify-content-end"> <!-- Alinear el botón a la derecha -->
-                <a class="enlace" style="margin-right: 10px;" href="../../servicios/comunicacion.html">
+            <div class="custom-table-container">
+                <div class="table-scroll-wrapper">
+                    <div class="table-inner">
+                        <div class="custom-table-header">
+                            <div class="tiempo-resolucion">
+                                Tiempo de resolución (HH/L-V)<br>
+                                8:00 am a 5:00 pm
+                            </div>
+                        </div>
+                        <table class="custom-table">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">Tipo de requerimiento</th>
+                                    <th class="text-center">Insumo</th>
+                                    <th class="text-center">Descripción</th>
+                                    <th class="text-center">Primera respuesta</th>
+                                    <th class="text-center">Resolución</th>
+                                    <th class="text-center">Total SLA</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">Diseño de comunicaciones cargue y despliegue</td>
+                                    <td>Producción audiovisual</td>
+                                    <td>
+                                        <ul style="padding-left: 20px; margin-bottom: 0;">
+                                            <li>Edición de video con preproducción, producción y posproducción.</li>
+                                            <li>GIF</li>
+                                            <li>Voz en <i>off</i></li>
+                                            <li><i>Jingles</i></li>
+                                            <li>Fotografía</li>
+                                            <li>Cortinillas de logos</li>
+                                        </ul>
+                                    </td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">78</td>
+                                    <td class="text-center">80</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-4 w-75 d-flex justify-content-end"> <a class="enlace" style="margin-right: 10px;" href="../../servicios/comunicacion.html">
                     <button class="boton">
                         <strong> Volver</strong>
                     </button>
@@ -145,14 +180,11 @@
             <br>
         </div>
     </div>
-</div>
 
-<!-- Pie de página -->
 <footer class="bg-dark text-white text-center py-4">
-    <p>© 2024. Todos los derechos reservados.</p>
+    <p class="m-0">© 2024. Todos los derechos reservados.</p>
 </footer>
 
-<!-- Bootstrap JS y dependencias -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

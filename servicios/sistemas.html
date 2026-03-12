@@ -11,16 +11,249 @@
     <link rel="stylesheet" href="../css/components/footer.css">
     <link rel="stylesheet" href="../css/servicios/formacion.css">
     <link rel="stylesheet" href="../css/servicios/sistemas.css">
+    
+    <style>
+         /* ====================================================== */
+        /* FIX: DOMESTICAR EL LOGO EN MÓVILES                     */
+        /* ====================================================== */
+        @media screen and (max-width: 768px) {
+            .logo img {
+                max-width: 70px !important; /* Limita el ancho del logo */
+                height: auto !important;
+                display: block;
+            }
+            
+            /* Asegura que el contenedor de la navbar no colapse raro */
+            .nav-container {
+                align-items: center !important;
+            }
+        }
+        /* ====================================================== */
+        /* GLOBAL: PREVIENE SCROLL HORIZONTAL EN LA PÁGINA        */
+        /* ====================================================== */
+        html, body {
+            overflow-x: hidden !important;
+            width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        /* ====================================================== */
+        /* PC Y PORTÁTILES (Grid de 3 columnas para 7 tarjetas)   */
+        /* ====================================================== */
+        .custom-grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .card-item {
+            width: 100% !important;
+            box-sizing: border-box !important;
+            margin: 0 !important;
+        }
+
+        /* ====================================================== */
+        /* OVERRIDE NUCLEAR PARA VENCER EL CSS EXTERNO            */
+        /* ====================================================== */
+        /* Matamos el flexbox del contenedor que estaba aplastando la tabla */
+        #sistemas-page .modal-contenido {
+            display: block !important; 
+            overflow-y: auto !important; 
+            overflow-x: hidden !important;
+            height: auto !important;
+            max-height: 90vh !important;
+            padding: 30px !important;
+        }
+        
+        #sistemas-page .modal-top-content {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            height: auto !important;
+            margin-bottom: 20px !important;
+        }
+
+        #sistemas-page .texto {
+            flex: 1 1 300px !important;
+            overflow: visible !important; /* Evitamos que secuestre el scroll */
+            padding: 10px !important;
+            height: auto !important;
+        }
+
+        #sistemas-page .imagen-contenedor {
+            flex: 1 1 250px !important;
+            padding: 10px !important;
+        }
+
+        /* ====================================================== */
+        /* TABLAS NATIVAS 100% FORZADAS Y RESPONSIVE              */
+        /* ====================================================== */
+        .contenedor-tabla-responsive {
+            display: block !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            overflow-x: auto !important;
+            -webkit-overflow-scrolling: touch !important;
+            margin-top: 20px !important;
+            margin-bottom: 20px !important;
+            border-radius: 8px !important;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;
+            border: 1px solid #ddd !important;
+            background-color: #fff !important;
+            flex-shrink: 0 !important; /* OBLIGATORIO: Evita que el padre flex lo colapse a 0px */
+            min-height: 100px !important; /* Fuerza una altura mínima visible */
+        }
+        
+        .tabla-segura {
+            display: table !important;
+            width: 100% !important;
+            min-width: 650px !important; /* Activa el scroll horizontal en móviles */
+            border-collapse: collapse !important;
+            background-color: #fff !important;
+            margin: 0 !important;
+            table-layout: auto !important;
+        }
+        
+        .tabla-segura th, .tabla-segura td {
+            display: table-cell !important;
+            border: 1px solid #ddd !important;
+            padding: 12px !important;
+            font-size: 14px !important;
+            text-align: left !important;
+            vertical-align: middle !important;
+            color: #333 !important;
+        }
+
+        .tabla-segura .fila-colores th {
+            color: white !important;
+            text-align: center !important;
+            font-size: 16px !important;
+        }
+        .tabla-segura .bg-rojo { background-color: #c00000 !important; border-color: #c00000 !important; }
+        .tabla-segura .bg-teal { background-color: #00afb0 !important; border-color: #00afb0 !important; }
+        .tabla-segura .fila-gris th {
+            background-color: #f2f2f2 !important;
+            color: #333 !important;
+            font-weight: bold !important;
+        }
+
+        /* ====================================================== */
+        /* ESTILOS DE MODAL Y ACORDEÓN BÁSICOS                    */
+        /* ====================================================== */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+        .modal-contenido {
+            background-color: #ffffff;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 800px;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+        }
+        .cerrar {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #666;
+            cursor: pointer;
+            z-index: 100;
+        }
+        .cerrar:hover { color: #000; }
+        .modal-top-content .texto h3 { color: #CF2028; font-size: 26px; margin-bottom: 15px; font-weight: bold; }
+        .modal-top-content .texto p { font-size: 16px; line-height: 1.6; color: #333; margin-bottom: 15px; }
+        .modal-top-content .imagen-contenedor img { max-width: 100%; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        
+        .accordion-container { margin-top: 20px; padding: 0 !important; }
+        .accordion-btn {
+            background-color: #CF2028;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            border: none;
+            border-radius: 8px;
+            text-align: left;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            outline: none;
+            margin-bottom: 8px;
+        }
+        .accordion-btn:hover, .accordion-btn.active { background-color: #a8171e; }
+        .accordion-content { padding: 0 20px; background-color: white; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        .accordion-content p { padding: 15px 0; margin: 0; }
+
+        /* ====================================================== */
+        /* WEB MÓVIL (Responsive)                                 */
+        /* ====================================================== */
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 100% !important;
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+                box-sizing: border-box !important;
+            }
+            .custom-grid-container {
+                grid-template-columns: repeat(2, 1fr) !important; 
+                gap: 15px !important;
+                padding: 0 !important;
+            }
+            .card-item {
+                height: 220px !important; 
+            }
+
+            #sistemas-page .modal-contenido {
+                width: 95% !important;
+                padding: 40px 15px 20px 15px !important;
+            }
+            #sistemas-page .modal-top-content {
+                flex-direction: column !important;
+                gap: 15px !important;
+            }
+            .modal-top-content .texto h3 { font-size: 1.3rem !important; text-align: center !important; }
+            .modal-top-content .imagen-contenedor { text-align: center !important; margin-top: 0 !important; }
+            
+            .tabla-segura th, .tabla-segura td {
+                padding: 10px !important;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .custom-grid-container {
+                grid-template-columns: 1fr !important; 
+            }
+            .card-item {
+                height: 180px !important;
+            }
+        }
+    </style>
 </head>
 <body id="sistemas-page">
- <!-- Navbar -->
  <nav class="navbar">
     <div class="container nav-container">
         <a href="../index.html" class="logo">
             <img src="../assets/images/logo.png" alt="Logo Universidad Claro">
         </a>
 
-        <!-- CAMBIO: Añadido el ícono del menú de hamburguesa para la vista responsive. -->
         <div class="burger-menu">
             <i class="fas fa-bars"></i>
         </div>
@@ -50,26 +283,19 @@
     </div>
 </nav>
 
-<!-- Hero Section para Formación -->
 <section class="hero-formacion" style="background: url('../assets/Banner/Index.png') center/cover no-repeat;">
-    <div class="hero-content">
+    <div class="hero-content"><br><br>
         <h1>Herramientas de apoyo</h1>
     </div>
 </section>
 
-    <!-- Hero Section para Formación>
-    <section class="hero-formacion" style="background: #f8f9fa url('../assets/Banner/Sistemas.jpg') center/contain no-repeat;">
-    </section-->
-
-    <!-- Contenido Principal -->
     <main class="content">
         <div class="container">
             <p class="intro-text">
                 Ofrecemos soluciones tecnológicas, soporte en plataformas y gestión de sistemas para optimizar tus operaciones. Explora nuestros servicios y solicita el soporte que necesitas.
             </p>
             
-            <div class="formacion-cards-row">
-                <!-- Tarjeta 1 -->
+            <div class="custom-grid-container">
                 <div class="card-item open-modal" data-modal="modal1" style="background-image: url('../assets/popups/Portada/Sistemas1.png'); cursor:pointer;">
                     <div class="card-overlay">
                         <h4>Creación de certificación</h4>
@@ -78,7 +304,6 @@
                     <h3>Creación de certificación</h3>
                 </div>
                 
-                <!-- Tarjeta 2 -->
                 <div class="card-item open-modal" data-modal="modal2" style="background-image: url('../assets/popups/Portada/Sistemas2.png'); cursor:pointer;">
                     <div class="card-overlay">
                         <h4>Solución en plataformas</h4>
@@ -87,7 +312,6 @@
                     <h3>Solución en plataformas</h3>
                 </div>
                 
-                <!-- Tarjeta 3 -->
                 <div class="card-item open-modal" data-modal="modal3" style="background-image: url('../assets/popups/Portada/Sistemas3.png'); cursor:pointer;">
                     <div class="card-overlay">
                         <h4>Configuración de curso virtual en SSFF</h4>
@@ -96,7 +320,6 @@
                     <h3>Configuración de curso virtual en SSFF</h3>
                 </div>
 
-                <!-- Tarjeta 4 -->
                 <div class="card-item open-modal" data-modal="modal4" style="background-image: url('../assets/popups/Portada/Sistemas4.png'); cursor:pointer;">
                     <div class="card-overlay">
                         <h4>Solicitud de acceso a plataformas de comunicación</h4>
@@ -104,10 +327,7 @@
                     </div>
                     <h3>Solicitud de acceso a plataformas de comunicación</h3>
                 </div>
-            </div>
 
-            <div class="formacion-cards-row">
-                <!-- Tarjeta 5 -->
                 <div class="card-item open-modal" data-modal="modal5" style="background-image: url('../assets/popups/Portada/Sistemas5.png'); cursor:pointer;">
                     <div class="card-overlay">
                         <h4>Actualización de bases de datos</h4>
@@ -116,7 +336,6 @@
                     <h3>Actualización de bases de datos</h3>
                 </div>
                 
-                <!-- Tarjeta 6 -->
                 <div class="card-item open-modal" data-modal="modal6" style="background-image: url('../assets/popups/Portada/Sistemas6.png'); cursor:pointer;">
                     <div class="card-overlay">
                         <h4>Matrícula de usuarios en plataforma de entrenamiento</h4>
@@ -125,7 +344,6 @@
                     <h3>Matrícula de usuarios en plataforma de entrenamiento</h3>
                 </div>
                 
-                <!-- Tarjeta 7 -->
                 <div class="card-item open-modal" data-modal="modal7" style="background-image: url('../assets/popups/Portada/Sistemas7.png'); cursor:pointer;">
                     <div class="card-overlay">
                         <h4>Incidencia en sistema/plataforma</h4>
@@ -141,15 +359,13 @@
         </div>
     </main>
 
-    <!-- Modales de formación - Con X dentro de la caja -->
-    <!-- Modal 1 -->
     <div id="modal1" class="modal">
         <div class="modal-contenido">
             <span class="cerrar">&times;</span>
             <div class="modal-top-content">
                 <div class="texto">
                     <h3>Creación de certificación</h3>
-                    <div class="accordion-container" style="padding: 0; margin-top: 20px;">
+                    <div class="accordion-container">
                         <button class="accordion-btn">¿Cómo podemos ayudarte?</button>
                         <div class="accordion-content">
                             <p>Nos encargamos de cargar en SSFF hasta 30 preguntas que acompañan lo cursos y certificaciones.</p>
@@ -172,35 +388,36 @@
                     <img src="../assets/images/Creacion_certificacion.png" alt="Creación de certificación">
                 </div>
             </div>
-            <div class="modal-table-container">
-                <div class="modal-table-header">
-                    <div class="soluciones">Soluciones</div>
-                    <div class="tiempo-resolucion">
-                        Tiempo de resolución (HH/L-V)<br>
-                        8:00 am a 5:00 pm
-                    </div>
-                </div>
-                <table class="modal-table">
-                    <tr>
-                        <th>Tipo de solicitud</th>
-                        <th>Características</th>
-                        <th>Primera respuesta</th>
-                        <th>Resolución</th>
-                        <th>Total SLA</th>
-                    </tr>
-                    <tr>
-                        <td>Creación de certificación​</td>
-                        <td>Carga de 30 preguntas en la plataforma en un (1) curso y/o certificación habilitada en el LMS.</td>
-                        <td>2</td>
-                        <td>14</td>
-                        <td>16</td>
-                    </tr>
+            
+            <div class="contenedor-tabla-responsive">
+                <table class="tabla-segura">
+                    <thead>
+                        <tr class="fila-colores">
+                            <th colspan="2" class="bg-rojo">Soluciones</th>
+                            <th colspan="3" class="bg-teal">Tiempo de resolución (HH/L-V)<br>8:00 am a 5:00 pm</th>
+                        </tr>
+                        <tr class="fila-gris">
+                            <th>Tipo de solicitud</th>
+                            <th>Características</th>
+                            <th>Primera respuesta</th>
+                            <th>Resolución</th>
+                            <th>Total SLA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Creación de certificación​</td>
+                            <td>Carga de 30 preguntas en la plataforma en un (1) curso y/o certificación habilitada en el LMS.</td>
+                            <td>2</td>
+                            <td>14</td>
+                            <td>16</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
     </div>
     
-    <!-- Modal 2 -->
     <div id="modal2" class="modal">
         <div class="modal-contenido">
             <span class="cerrar">&times;</span>
@@ -213,35 +430,36 @@
                     <img src="../assets/images/Solucion_en_plataformas__Contenido.png" alt="Solución en plataformas">
                 </div>
             </div>
-            <div class="modal-table-container">
-                <div class="modal-table-header">
-                    <div class="soluciones">Soluciones</div>
-                    <div class="tiempo-resolucion">
-                        Tiempo de resolución (HH/L-V)<br>
-                        8:00 am a 5:00 pm
-                    </div>
-                </div>
-                <table class="modal-table">
-                    <tr>
-                        <th>Tipo de solicitud</th>
-                        <th>Características</th>
-                        <th>Primera respuesta</th>
-                        <th>Resolución</th>
-                        <th>Total SLA</th>
-                    </tr>
-                    <tr>
-                        <td>Solución en plataformas​</td>
-                        <td>El diseño de soluciones tecnológicas se enfoca en proporcionar la información necesaria al negocio a través de los sistemas gestionados por U Claro, incluyendo el desarrollo de landing pages o bases de datos (DDBB) para facilitar el acceso y consulta eficiente.</td>
-                        <td>Segun el requerimiento</td>
-                        <td>Segun el requerimiento</td>
-                        <td>Segun el requerimiento</td>
-                    </tr>
+            
+            <div class="contenedor-tabla-responsive">
+                <table class="tabla-segura">
+                    <thead>
+                        <tr class="fila-colores">
+                            <th colspan="2" class="bg-rojo">Soluciones</th>
+                            <th colspan="3" class="bg-teal">Tiempo de resolución (HH/L-V)<br>8:00 am a 5:00 pm</th>
+                        </tr>
+                        <tr class="fila-gris">
+                            <th>Tipo de solicitud</th>
+                            <th>Características</th>
+                            <th>Primera respuesta</th>
+                            <th>Resolución</th>
+                            <th>Total SLA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Solución en plataformas​</td>
+                            <td>El diseño de soluciones tecnológicas se enfoca en proporcionar la información necesaria al negocio a través de los sistemas gestionados por U Claro, incluyendo el desarrollo de landing pages o bases de datos (DDBB) para facilitar el acceso y consulta eficiente.</td>
+                            <td>Segun el requerimiento</td>
+                            <td>Segun el requerimiento</td>
+                            <td>Segun el requerimiento</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
     </div>
     
-    <!-- Modal 3 -->
     <div id="modal3" class="modal">
         <div class="modal-contenido">
             <span class="cerrar">&times;</span>
@@ -254,33 +472,36 @@
                     <img src="../assets/images/Configuracion_de_curso_virtual_en_SSFF_Contenidos.png" alt="Configuración de curso virtual en SSFF">
                 </div>
             </div>
-            <div class="modal-table-container">
-                <div class="modal-table-header">
-                    <div class="soluciones">Soluciones</div>
-                    <div class="tiempo-resolucion">
-                        Tiempo de resolución (HH/L-V)<br>
-                        8:00 am a 5:00 pm
-                    </div>
-                </div>
-                <table class="modal-table">
-                    <tr>
-                        <th>Tipo de solicitud</th>
-                        <th>Características</th>
-                        <th>Primera respuesta</th>
-                        <th>Resolución</th>
-                        <th>Total SLA</th>
-                    </tr>
-                    <tr>
-                        <td>Configuración de curso virtual en plataforma</td>
-                        <td>La solicitud consiste en configurar un curso virtual en SSFF, creando un espacio donde se cargue contenido (HTML, documentos, imágenes, multimedia, enlaces) y se establezca un foro para que los usuarios interactúen.</td>
-                        <td>2</td>
-                        <td>10</td>
-                        <td>12</td>
-                    </tr>
+            
+            <div class="contenedor-tabla-responsive">
+                <table class="tabla-segura">
+                    <thead>
+                        <tr class="fila-colores">
+                            <th colspan="2" class="bg-rojo">Soluciones</th>
+                            <th colspan="3" class="bg-teal">Tiempo de resolución (HH/L-V)<br>8:00 am a 5:00 pm</th>
+                        </tr>
+                        <tr class="fila-gris">
+                            <th>Tipo de solicitud</th>
+                            <th>Características</th>
+                            <th>Primera respuesta</th>
+                            <th>Resolución</th>
+                            <th>Total SLA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Configuración de curso virtual en plataforma</td>
+                            <td>La solicitud consiste en configurar un curso virtual en SSFF, creando un espacio donde se cargue contenido (HTML, documentos, imágenes, multimedia, enlaces) y se establezca un foro para que los usuarios interactúen.</td>
+                            <td>2</td>
+                            <td>10</td>
+                            <td>12</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
-    </div><!-- Modal 4 -->
+    </div>
+    
     <div id="modal4" class="modal">
         <div class="modal-contenido">
             <span class="cerrar">&times;</span>
@@ -293,34 +514,36 @@
                     <img src="../assets/images/Solicitud_de_acceso_a_plataformas_de_comunicacion__Contenido.jpg" alt="Solicitud de acceso a plataformas de comunicación">
                 </div>
             </div>
-            <div class="modal-table-container">
-                <div class="modal-table-header">
-                    <div class="soluciones">Soluciones</div>
-                    <div class="tiempo-resolucion">
-                        Tiempo de resolución (HH/L-V)<br>
-                        8:00 am a 5:00 pm
-                    </div>
-                </div>
-                <table class="modal-table">
-                    <tr>
-                        <th>Tipo de solicitud</th>
-                        <th>Características</th>
-                        <th>Primera respuesta</th>
-                        <th>Resolución</th>
-                        <th>Total SLA</th>
-                    </tr>
-                    <tr>
-                        <td>Solicitud de acceso a plataformas de comunicación​</td>
-                        <td>Solicitud de acceso a alguna de las plataformas de comunicación gestionadas por U Claro (Conectados y PID).​</td>
-                        <td>2</td>
-                        <td>8</td>
-                        <td>10</td>
-                    </tr>
+            
+            <div class="contenedor-tabla-responsive">
+                <table class="tabla-segura">
+                    <thead>
+                        <tr class="fila-colores">
+                            <th colspan="2" class="bg-rojo">Soluciones</th>
+                            <th colspan="3" class="bg-teal">Tiempo de resolución (HH/L-V)<br>8:00 am a 5:00 pm</th>
+                        </tr>
+                        <tr class="fila-gris">
+                            <th>Tipo de solicitud</th>
+                            <th>Características</th>
+                            <th>Primera respuesta</th>
+                            <th>Resolución</th>
+                            <th>Total SLA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Solicitud de acceso a plataformas de comunicación​</td>
+                            <td>Solicitud de acceso a alguna de las plataformas de comunicación gestionadas por U Claro (Conectados y PID).​</td>
+                            <td>2</td>
+                            <td>8</td>
+                            <td>10</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
     </div>
-    <!-- Modal 5 -->
+    
     <div id="modal5" class="modal">
         <div class="modal-contenido">
             <span class="cerrar">&times;</span>
@@ -333,10 +556,9 @@
                     <img src="../assets/images/Actualizacion_de_bases_de_datos_.png" alt="Actualización de bases de datos">
                 </div>
             </div>
-            
         </div>
     </div>
-    <!-- Modal 6 -->
+    
     <div id="modal6" class="modal">
         <div class="modal-contenido">
             <span class="cerrar">&times;</span>
@@ -349,34 +571,36 @@
                     <img src="../assets/images/Matricula_de_usuarios_en_plataforma_de_entrenamiento__Contenido.png" alt="Matrícula de usuarios en plataforma de entrenamiento">
                 </div>
             </div>
-            <div class="modal-table-container">
-                <div class="modal-table-header">
-                    <div class="soluciones">Soluciones</div>
-                    <div class="tiempo-resolucion">
-                        Tiempo de resolución (HH/L-V)<br>
-                        8:00 am a 5:00 pm
-                    </div>
-                </div>
-                <table class="modal-table">
-                    <tr>
-                        <th>Tipo de solicitud</th>
-                        <th>Características</th>
-                        <th>Primera respuesta</th>
-                        <th>Resolución</th>
-                        <th>Total SLA</th>
-                    </tr>
-                    <tr>
-                        <td>Matrícula de usuarios en plataforma de entrenamiento</td>
-                        <td>Creación y matrícula masiva de usuarios en un curso y/o certificación habilitada en el LMS.​</td>
-                        <td>2</td>
-                        <td>10</td>
-                        <td>12</td>
-                    </tr>
+            
+            <div class="contenedor-tabla-responsive">
+                <table class="tabla-segura">
+                    <thead>
+                        <tr class="fila-colores">
+                            <th colspan="2" class="bg-rojo">Soluciones</th>
+                            <th colspan="3" class="bg-teal">Tiempo de resolución (HH/L-V)<br>8:00 am a 5:00 pm</th>
+                        </tr>
+                        <tr class="fila-gris">
+                            <th>Tipo de solicitud</th>
+                            <th>Características</th>
+                            <th>Primera respuesta</th>
+                            <th>Resolución</th>
+                            <th>Total SLA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Matrícula de usuarios en plataforma de entrenamiento</td>
+                            <td>Creación y matrícula masiva de usuarios en un curso y/o certificación habilitada en el LMS.​</td>
+                            <td>2</td>
+                            <td>10</td>
+                            <td>12</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
     </div>
-    <!-- Modal 7 -->
+    
     <div id="modal7" class="modal">
         <div class="modal-contenido">
             <span class="cerrar">&times;</span>
@@ -389,35 +613,36 @@
                     <img src="../assets/images/Incidencia_en_sistema_plataforma__Contenido.jpg" alt="Incidencia en sistema/plataforma">
                 </div>
             </div>
-            <div class="modal-table-container">
-                <div class="modal-table-header">
-                    <div class="soluciones">Soluciones</div>
-                    <div class="tiempo-resolucion">
-                        Tiempo de resolución (HH/L-V)<br>
-                        8:00 am a 5:00 pm
-                    </div>
-                </div>
-                <table class="modal-table">
-                    <tr>
-                        <th>Tipo de solicitud</th>
-                        <th>Características</th>
-                        <th>Primera respuesta</th>
-                        <th>Resolución</th>
-                        <th>Total SLA</th>
-                    </tr>
-                    <tr>
-                        <td>Incidencia en sistema/Plataforma</td>
-                        <td>Los sistemas soportados incluyen SSFF, Comunidad Virtual, PID y Conectados. En caso de presentarse inconvenientes, se pueden generar reportes sobre diversas fallas, como problemas de visualización, acceso de usuarios, ralentización de la plataforma o la imposibilidad de cargar la plataforma. Estos reportes permiten identificar y solucionar rápidamente los problemas técnicos que puedan afectar el funcionamiento de las plataformas.​</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>5</td>
-                    </tr>
+            
+            <div class="contenedor-tabla-responsive">
+                <table class="tabla-segura">
+                    <thead>
+                        <tr class="fila-colores">
+                            <th colspan="2" class="bg-rojo">Soluciones</th>
+                            <th colspan="3" class="bg-teal">Tiempo de resolución (HH/L-V)<br>8:00 am a 5:00 pm</th>
+                        </tr>
+                        <tr class="fila-gris">
+                            <th>Tipo de solicitud</th>
+                            <th>Características</th>
+                            <th>Primera respuesta</th>
+                            <th>Resolución</th>
+                            <th>Total SLA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Incidencia en sistema/Plataforma</td>
+                            <td>Los sistemas soportados incluyen SSFF, Comunidad Virtual, PID y Conectados. En caso de presentarse inconvenientes, se pueden generar reportes sobre diversas fallas, como problemas de visualización, acceso de usuarios, ralentización de la plataforma o la imposibilidad de cargar la plataforma. Estos reportes permiten identificar y solucionar rápidamente los problemas técnicos que puedan afectar el funcionamiento de las plataformas.​</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>5</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-logo">
@@ -434,12 +659,9 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="../js/scripts.js"></script>
     <script>
-        // Funcionalidad para los modales
         document.addEventListener('DOMContentLoaded', function() {
-            // Abrir modales
             const openModalButtons = document.querySelectorAll('.open-modal');
             openModalButtons.forEach(button => {
                 button.addEventListener('click', function() {
@@ -452,7 +674,6 @@
                 });
             });
             
-            // Cerrar modales
             const closeButtons = document.querySelectorAll('.cerrar');
             closeButtons.forEach(button => {
                 button.addEventListener('click', function() {
@@ -464,7 +685,6 @@
                 });
             });
             
-            // Cerrar al hacer clic fuera del modal
             window.addEventListener('click', function(event) {
                 const modals = document.querySelectorAll('.modal');
                 modals.forEach(modal => {
@@ -474,18 +694,18 @@
                     }
                 });
             });
-        });
 
-        const accordions = document.querySelectorAll('.accordion-btn');
-        accordions.forEach(acc => {
-            acc.addEventListener('click', function() {
-                this.classList.toggle('active');
-                const panel = this.nextElementSibling;
-                if (panel.style.maxHeight) {
-                    panel.style.maxHeight = null;
-                } else {
-                    panel.style.maxHeight = panel.scrollHeight + "px";
-                }
+            const accordions = document.querySelectorAll('.accordion-btn');
+            accordions.forEach(acc => {
+                acc.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    const panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
             });
         });
     </script>
