@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coordinacion de Contenidos - Claro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/components/navbar.css">
+    <link rel="stylesheet" href="../css/components/cards.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
+    <link rel="stylesheet" href="../css/servicios/formacion.css">
+    <link rel="stylesheet" href="../css/servicios/contenidos.css">
+
+    <style>
+         /* ====================================================== */
+        /* FIX: DOMESTICAR EL LOGO EN MÓVILES                     */
+        /* ====================================================== */
+        .logo {
+            display: flex !important;
+            align-items: center !important;
+            max-width: 150px !important;
+            margin: 0 !important;
+            padding: 5px 0 !important;
+        }
+
+        .logo img {
+            width: 100% !important;
+            max-width: 120px !important;
+            height: auto !important;
+            object-fit: contain !important;
+            display: block !important;
+        }
+
+        @media screen and (max-width: 768px) {
+            .logo { max-width: 100px !important; }
+            .logo img { max-width: 80px !important; }
+            .nav-container { align-items: center !important; }
+        }
+
+        /* ====================================================== */
+        /* FIX: CARRUSEL HERO (BANNERS PRINCIPALES)               */
+        /* ====================================================== */
+        .hero-carousel {
+            width: 100% !important;
+            overflow: hidden !important;
+            position: relative !important;
+            height: 380px !important; /* Altura prudente y esbelta para PC */
+            background-color: #f4f4f4; /* Fondo por si la imagen tarda en cargar */
+        }
+        .carousel-container {
+            width: 100% !important;
+            height: 100% !important;
+            overflow: hidden !important;
+        }
+        .carousel-track {
+            display: flex !important;
+            height: 100% !important;
+        }
+        .carousel-slide {
+            flex: 0 0 100% !important;
+            width: 100% !important;
+            min-width: 100% !important;
+            height: 100% !important;
+        }
+        .carousel-slide img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important; 
+            object-position: center !important;
+            display: block !important;
+        }
+
+        /* Escalonamiento de altura para el banner principal */
+        @media screen and (max-width: 1024px) {
+            .hero-carousel { height: 280px !important; }
+        }
+
+        @media screen and (max-width: 768px) {
+            .hero-carousel { height: 200px !important; }
+        }
+
+        @media screen and (max-width: 480px) {
+            .hero-carousel { height: 140px !important; } /* Proporción horizontal correcta para que no se corte en móviles */
+        }
+
+        /* ====================================================== */
+        /* FIX: CARRUSEL DE TARJETAS INFERIOR                     */
+        /* ====================================================== */
+        .card-carousel-wrapper {
+            width: 100%;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        .card-carousel-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .card-carousel {
+            overflow: hidden;
+            width: 100%;
+            margin: 0 40px; /* Espacio para las flechas en PC */
+        }
+        .card-track {
+            display: flex;
+        }
+        .card-slide {
+            flex: 0 0 calc(100% / 3); /* 3 por fila en PC */
+            box-sizing: border-box;
+            padding: 0 15px; /* Separación entre tarjetas */
+        }
+        .card-item {
+            width: 100% !important;
+            height: 300px; /* <-- De vuelta a 300px para PC */
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ====================================================== */
+        /* FIX: TEXTOS Y RESPONSIVE GENERAL MÓVIL                 */
+        /* ====================================================== */
+        .texto-referencia {
+            background-color: #cf2028;
+            color: white;
+            text-align: center;
+            border-radius: 20px;
+            border: 3px solid white;
+            outline: 2px solid #cf2028;
+            margin: 20px auto;
+            max-width: 95%; 
+            box-sizing: border-box;
+            padding: 40px 60px; 
+        }
+
+        @media screen and (max-width: 768px) {
+            /* Tarjetas Carrusel Móvil a 1 columna completa */
+            .card-carousel {
+                margin: 0 !important; /* Quitamos márgenes de flechas para aprovechar 100% */
+            }
+            .card-slide {
+                flex: 0 0 100% !important; /* 1 tarjeta por vista */
+                max-width: 100% !important;
+                padding: 0 15px !important; /* Margen para que no toque bordes del cel */
+            }
+            .card-item {
+                height: 380px !important; /* <-- Estirón aplicado SOLO en móviles */
+            }
+
+            /* Flechas superpuestas en móvil para ganar espacio */
+            .card-carousel-control {
+                position: absolute !important;
+                z-index: 10;
+                background: rgba(255,255,255,0.8) !important;
+                border: 1px solid #ddd !important;
+                width: 35px !important;
+                height: 35px !important;
+                border-radius: 50% !important;
+            }
+            .card-carousel-control.prev { left: 5px !important; }
+            .card-carousel-control.next { right: 5px !important; }
+
+            /* Textos Móvil */
+            .texto-referencia {
+                padding: 20px 15px; 
+                font-size: 15px;
+                line-height: 1.4;
+            }
+            .banner-consulta {
+                font-size: 22px !important; 
+                padding: 20px !important;
+            }
+        }
+    </style>
+</head>
+<body id="contenidos-page">
+   <nav class="navbar">
+    <div class="container nav-container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.png" alt="Logo Universidad Claro">
+        </a>
+
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="nav-links">
+            <div class="nav-item">
+                <a href="../categorias.html" class="nav-link">Categorías</a>
+            </div>
+
+            <div class="nav-item dropdown">
+                <a href="../servicios.html" class="nav-link">Servicios</a>
+                <div class="dropdown-content">
+                    <a href="../servicios.html">Inicio</a>
+                    <a href="formacion.html">Formación</a>
+                    <a href="contenidos.html">Contenidos</a>
+                    <a href="comunicacion.html">Comunicación</a>
+                    <a href="sistemas.html">Herramientas de apoyo</a>
+                    <a href="mediciones-reportes.html">Mediciones y Reportes</a>
+                </div>
+            </div>
+
+            <div class="nav-item search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="search" class="search-bar" placeholder="Buscar...">
+            </div>
+        </div>
+    </div>
+</nav>
+
+<section class="hero-carousel">
+    <div class="carousel-container">
+        <div class="carousel-track">
+            <div class="carousel-slide"><img src="../assets/images/1.jpg" alt="Imagen 1"></div>
+            <div class="carousel-slide"><img src="../assets/images/2.jpg" alt="Imagen 2"></div>
+            <div class="carousel-slide"><img src="../assets/images/3.jpg" alt="Imagen 3"></div>
+            <div class="carousel-slide"><img src="../assets/images/4.1.png" alt="Imagen 4"></div>
+            <div class="carousel-slide"><img src="../assets/images/5.jpg" alt="Imagen 5"></div>
+            <div class="carousel-slide"><img src="../assets/images/6.jpg" alt="Imagen 6"></div>
+            <div class="carousel-slide"><img src="../assets/images/7.jpg" alt="Imagen 7"></div>
+        </div>
+    </div>
+    <button class="carousel-control prev"><i class="fas fa-chevron-left"></i></button>
+    <button class="carousel-control next"><i class="fas fa-chevron-right"></i></button>
+</section>
+
+<main class="content">
+    <div class="container">
+        <div class="texto-referencia">
+            <p>
+                Bienvenido al catálogo de soluciones de Universidad Claro. Conoce los diferentes productos y servicios diseñados a la medida, para impulsar tus indicadores y fortalecer el desarrollo de competencias clave en tu equipo. Nuestra oferta integra contenidos innovadores, experiencias de aprendizaje efectivas y metodologías adaptadas a los retos actuales de la organización.
+            </p>
+        </div>
+    </div>
+
+    <div class="servicios-title" style="text-align:center; padding: 20px 10px;">
+        <p style="font-size: 1.2rem; font-weight: bold;">¡Explora cada sección y conoce los servicios que <span class="highlight" style="color: #cf2028;">impulsan el aprendizaje y desarrollo</span>!</p>
+    </div>
+
+    <div class="card-carousel-wrapper">
+        <div class="card-carousel-container">
+            <button class="card-carousel-control prev"><i class="fas fa-chevron-left"></i></button>
+            <div class="card-carousel">
+                <div class="card-track">
+                    <a href="Catalogo/LG.html" class="card-slide"><div class="card-item" style="background-image: url('../assets/popups/Portada/LineaGrafica.png');">
+                        <div class="card-overlay"><span class="btn-ver-mas">¡ Ver más!</span></div>
+                    </div></a>
+                    <a href="Catalogo/Step.html" class="card-slide"><div class="card-item" style="background-image: url('../assets/popups/Portada/ClaroStep.png');">
+                        <div class="card-overlay"><span class="btn-ver-mas">¡ Ver más!</span></div>
+                    </div></a>
+                    <a href="Catalogo/MLE.html" class="card-slide"><div class="card-item" style="background-image: url('../assets/popups/Portada/MicroLearning.png');">
+                        <div class="card-overlay"><span class="btn-ver-mas">¡ Ver más!</span></div>
+                    </div></a>
+                    <a href="Catalogo/Info.html" class="card-slide"><div class="card-item" style="background-image: url('../assets/popups/Portada/Infografia.png');">
+                        <div class="card-overlay"><span class="btn-ver-mas">¡ Ver más!</span></div>
+                    </div></a>
+                    <a href="Catalogo/OVA.html" class="card-slide"><div class="card-item" style="background-image: url('../assets/popups/Portada/Ova.png');">
+                        <div class="card-overlay"><span class="btn-ver-mas">¡ Ver más!</span></div>
+                    </div></a>
+                    <a href="Catalogo/IA.html" class="card-slide"><div class="card-item" style="background-image: url('../assets/popups/Portada/IA.png');">
+                        <div class="card-overlay"><span class="btn-ver-mas">¡ Ver más!</span></div>
+                    </div></a>
+                    <a href="Catalogo/ClaroReview.html" class="card-slide"><div class="card-item" style="background-image: url('../assets/popups/Portada/Claro_Review.png');">
+                        <div class="card-overlay"><span class="btn-ver-mas">¡ Ver más!</span></div>
+                    </div></a>
+                    <a href="Catalogo/ClaroSkills.html" class="card-slide"><div class="card-item" style="background-image: url('../assets/popups/Portada/Claro_Skills.png');">
+                        <div class="card-overlay"><span class="btn-ver-mas">¡ Ver más!</span></div>
+                    </div></a>
+                    <a href="Catalogo/ClaroChallenge.html" class="card-slide"><div class="card-item" style="background-image: url('../assets/popups/Portada/Claro_Challenge.png');">
+                        <div class="card-overlay"><span class="btn-ver-mas">¡ Ver más!</span></div>
+                    </div></a>
+                    <a href="Catalogo/Video.html" class="card-slide"><div class="card-item" style="background-image: url('../assets/popups/Portada/Videodescubremas.png');">
+                        <div class="card-overlay"><span class="btn-ver-mas">¡ Ver más!</span></div>
+                    </div></a>
+                    <a href="Catalogo/Podcast.html" class="card-slide"><div class="card-item" style="background-image: url('../assets/popups/Portada/Podcast.png');">
+                        <div class="card-overlay"><span class="btn-ver-mas">¡ Ver más!</span></div>
+                    </div></a>
+                </div>
+            </div>
+            <button class="card-carousel-control next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div style="margin: 0 10px; font-family: Arial, sans-serif; background-color: #222222; display: flex; justify-content: center; align-items: center; min-height: 20vh; border-radius: 20px;">
+        <div class="banner-consulta" style="font-size: 40px; color: white; text-align: center; padding: 20px; font-weight: bold;">
+            ¡Consulta <a href="https://conectados.com.co/web/guest/-/consulta_repositorio_contenidos" target="_blank" style="color: #ff0000; text-decoration: none;">aquí</a> el catálogo de contenidos!
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 50px; margin-bottom: 20px;">
+        <a href="../servicios.html" class="btn" style="text-decoration: none; padding: 10px 20px; background: #da291c; color: white; border-radius: 5px; font-weight: bold;">Volver a Servicios</a>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container footer-container">
+        <div class="footer-logo">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logofooter.png" alt="Logo Universidad Claro">
+            </a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            &copy; 2025 Claro.com. Todos los derechos reservados.
+        </div>
+    </div>
+</footer>
+
+<script src="../js/scripts.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Variables compartidas
+        let heroSlideWidth = 0;
+        let cardSlideWidth = 0;
+
+        // Hero Carousel Logic
+        const heroTrack = document.querySelector('.hero-carousel .carousel-track');
+        let heroCurrentIndex = 0;
+        let heroSlideCount = 0;
+
+        if(heroTrack) {
+            const heroSlides = Array.from(heroTrack.children);
+            const heroNextButton = document.querySelector('.hero-carousel .next');
+            const heroPrevButton = document.querySelector('.hero-carousel .prev');
+            heroSlideCount = heroSlides.length;
+
+            const firstClone = heroSlides[0].cloneNode(true);
+            const lastClone = heroSlides[heroSlideCount - 1].cloneNode(true);
+            heroTrack.appendChild(firstClone);
+            heroTrack.insertBefore(lastClone, heroSlides[0]);
+
+            const updateHeroPosition = (instant = false) => {
+                heroSlideWidth = heroTrack.children[0].getBoundingClientRect().width;
+                heroTrack.style.transition = instant ? 'none' : 'transform 1.5s ease-in-out';
+                heroTrack.style.transform = `translateX(-${(heroCurrentIndex + 1) * heroSlideWidth}px)`;
+            };
+            
+            // Initial position
+            updateHeroPosition(true);
+
+            function moveToHeroSlide(direction) {
+                heroCurrentIndex += direction;
+                updateHeroPosition();
+            }
+
+            heroTrack.addEventListener('transitionend', () => {
+                if (heroCurrentIndex >= heroSlideCount) {
+                    heroCurrentIndex = 0;
+                    updateHeroPosition(true);
+                }
+                if (heroCurrentIndex < 0) {
+                    heroCurrentIndex = heroSlideCount - 1;
+                    updateHeroPosition(true);
+                }
+            });
+
+            heroNextButton.addEventListener('click', () => moveToHeroSlide(1));
+            heroPrevButton.addEventListener('click', () => moveToHeroSlide(-1));
+            setInterval(() => moveToHeroSlide(1), 5000);
+            
+            // Update on resize
+            window.addEventListener('resize', () => updateHeroPosition(true));
+        }
+
+        // Card Carousel Logic
+        const cardCarousel = document.querySelector('.card-carousel');
+        let cardCurrentIndex = 0;
+        
+        if(cardCarousel) {
+            const cardTrack = cardCarousel.querySelector('.card-track');
+            const cardSlides = Array.from(cardTrack.children);
+            const cardNextButton = document.querySelector('.card-carousel-container .next');
+            const cardPrevButton = document.querySelector('.card-carousel-container .prev');
+            const slideCount = cardSlides.length;
+
+            const updateCardPosition = (instant = false) => {
+                cardSlideWidth = cardSlides[0].getBoundingClientRect().width;
+                cardTrack.style.transition = instant ? 'none' : 'transform 0.5s ease-in-out';
+                const offset = -(cardSlideWidth * cardCurrentIndex);
+                cardTrack.style.transform = `translateX(${offset}px)`;
+            };
+            
+            // Initial position
+            updateCardPosition(true);
+
+            cardNextButton.addEventListener('click', () => {
+                cardCurrentIndex = (cardCurrentIndex + 1) % slideCount;
+                updateCardPosition();
+            });
+
+            cardPrevButton.addEventListener('click', () => {
+                cardCurrentIndex = (cardCurrentIndex - 1 + slideCount) % slideCount;
+                updateCardPosition();
+            });
+
+            setInterval(() => {
+                cardCurrentIndex = (cardCurrentIndex + 1) % slideCount;
+                updateCardPosition();
+            }, 7000);
+
+            // Update on resize
+            window.addEventListener('resize', () => updateCardPosition(true));
+        }
+    });
+</script>
+</body>
+</html>
